@@ -1,15 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import HomePage from './pages/Home/HomePage'
+import React from "react";
+import HomeNavbar from './components/HomeComponents/HomeNavbar/HomeNavbar'
 import './App.scss'
+import {Route, Routes} from "react-router-dom";
+import TestPage from './pages/Home/TestPage';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <HomePage/>
-    </div>
+    <React.Fragment>
+      <Routes>
+        <Route path="" element={<TestPage/>}/>
+        <Route path="/h" element={<HomePage/>}/>
+      </Routes>
+    </React.Fragment>
   )
 }
 

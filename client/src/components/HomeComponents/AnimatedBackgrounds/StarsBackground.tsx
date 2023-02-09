@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState} from "react";
 import "./_stars_background.scss";
 import "./_gradient_brackground.scss";
 
@@ -10,11 +10,9 @@ function StarsBackground() {
       <div className="stars" />
       <div className="stars2" />
       <div className="stars3" />
-      <div className="stars4" />
-      <canvas id="myCanvas" width="200" height="100"></canvas>
-      <div className="gradient_background">
-        <div className="gradient" />
-      </div>
+      <div className='gradient_background'>
+        <div className="gradient"/>
+    </div>
     </div>
   );
 }

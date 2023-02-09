@@ -4,11 +4,6 @@ $speed: 3s;          // Number of seconds to transition between layers
 $width: 3000;        // Width of the starfield
 $height: 1000;        // Height of the starfield
 
-html, body {
-  height: 100%;
-  overflow: hidden;
-}
-
 .stars_background {
   width: 100%;
   position: absolute;

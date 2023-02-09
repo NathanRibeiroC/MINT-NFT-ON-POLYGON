@@ -11,7 +11,7 @@
     --size: 100%;
     --speed: 50s;
     --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
-
+    z-index: 1;
     width: var(--size);
     height: var(--size);
     filter: blur(calc(var(--size) / 5));
@@ -25,6 +25,18 @@
       --size: 50px;
     }
   }
+
+  @media (min-width: 300px) {
+    .gradient {
+      --size: 50px;
+    }
+  }
+
+  @media (max-width: 100px) {
+    .gradient {
+      --size: 20px;
+    }
+  }
   
   .gradient_background{
     // background-color: #222;
@@ -35,6 +47,7 @@
     place-content: center;
     align-items: center;
     overflow: hidden;
+    z-index: 10001;
   }
   
   /* This is just to transition when you change the viewport size. */

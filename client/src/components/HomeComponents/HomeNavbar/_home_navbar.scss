@@ -1,7 +1,32 @@
+$shadow: .3rem .3rem .6rem var(--greyLight-2), 
+-.2rem -.2rem .5rem var(--white);
+$inner-shadow: inset .2rem .2rem .5rem var(--greyLight-2), 
+inset -.2rem -.2rem .5rem var(--white);
+
 .main-nav{
+    margin-top: 1%;
+    margin-left: 1%;
     position: fixed;
-    z-index: 9999;
-    width: 100%;
-    background-color: white;
-    height: 20px;
+    z-index: 10001;
+    width: 98%;
+    height: 6em;
+    //////////////////
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px) saturate(180%);
+    border-radius: 10px;
+    border: none;
+}
+
+.main-nav1{
+    margin-top: 1%;
+    margin-left: 1%;
+    position: fixed;
+    z-index: 10001;
+    width: 98%;
+    height: 6em;
+    //////////////////
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(10px) saturate(180%);
+    border-radius: 10px;
+    border: none;
 }
