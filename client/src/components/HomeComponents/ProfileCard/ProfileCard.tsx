@@ -2,6 +2,7 @@ import "./_profile_card.scss"
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AboutTab from "./AboutTab";
+import ProfileBackgroundAnimatedGradient from "./ProfileBackgroundAnimatedGradient";
 
 function ProfileCard() {
   const tabs = [
@@ -16,6 +17,7 @@ function ProfileCard() {
   return (
     <div className="card">
       <main>
+        {/* <ProfileBackgroundAnimatedGradient/> */}
         <AboutTab/>
       </main>
       <nav>

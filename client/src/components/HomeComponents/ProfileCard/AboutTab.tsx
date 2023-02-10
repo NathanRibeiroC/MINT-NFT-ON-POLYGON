@@ -1,10 +1,8 @@
 import "./_profile_card.scss"
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import profilePicture from "../../../../public/profile img-1.jpg";
-import githubIcon from "../../../../public/iconmonstr-github-1.svg";
-import linkedinIcon from "../../../../public/iconmonstr-linkedin-4.svg";
-import GithubIcon from "../../../assets/GithubIcon";
+import { ReactComponent as GithubIcon } from '../../../../public/iconmonstr-github-1.svg';
+import { ReactComponent as LinkedinIcon } from '../../../../public/iconmonstr-linkedin-4.svg';
 
 function AboutTab() {
   return (
@@ -19,9 +17,12 @@ function AboutTab() {
             </p>
         </div>
         <div className="contact-card">
-            <GithubIcon fill="blue"/>
-            <img src={githubIcon} className="github-icon"/>
-            <img src={linkedinIcon} className="linkedin-icon"/>
+            <a href="https://github.com/NathanRibeiroC?tab=overview&from=2022-08-01&to=2022-08-07" target="_blank">
+            <GithubIcon className="github-icon"/>
+            </a>
+            <a href="https://github.com/NathanRibeiroC?tab=overview&from=2022-08-01&to=2022-08-07" target="_blank">
+            <LinkedinIcon className="linkedin-icon"/>
+            </a>
         </div>
     </div>
   );
