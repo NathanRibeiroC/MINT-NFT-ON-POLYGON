@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500|Jost:400,500,600&display=swap");
 
 //GENERAL WINDOW (NAVBAR + CARD)
+
+.card{
+  font-family: "Jost", sans-serif;
+  color: #2b2c48;
+}
+
 nav {
   background: #fdfdfd;
   padding: 0;
@@ -15,7 +21,7 @@ nav {
   width: 300px;
   height: 450px;
   border-radius: 10px;
-  background: white;
+  background: #fdfdfd;
   overflow: hidden;
   box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
   display: flex;
@@ -61,10 +67,73 @@ li.selected {
 .about-tab {
   width: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+  transition: 0.3s;
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
+  align-items: center;
+  padding-top: 30px;
 
-  img {
+  .about-profile-picture {
     border-radius: 100%;
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  h1{
+    font-size: 19px;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+  }
+
+  h2{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 0 0 20px 0;
+    font-weight: 500;
+    color: #918c8a;
+  }
+
+  .main-text{
+    padding-left: 10px;
+    h3{
+      font-size: 13px;
+      font-weight: 700;
+      margin: 0;
+      padding: 0 0 8px 0;
+    }
+
+    p{
+      font-size: 13px;
+      color: #6f6f7b;
+      line-height: 1.5;
+      font-family: "DM Sans", sans-serif;
+      margin: 0;
+      padding-right: 17px;
+      padding-bottom: 17px;
+    }
+  }
+
+  .contact-card{
+    padding-right:225px;
+
+    .github-icon{
+      padding-right: 5px;
+      height: 25px;
+      cursor: pointer;
+    }
+
+    .github-icon:hover{
+        color: blue;
+    }
+
+    .linkedin-icon{
+      height: 25px;
+      cursor: pointer;
+    }
   }
 }
