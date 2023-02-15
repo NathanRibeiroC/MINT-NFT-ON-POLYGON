@@ -3,10 +3,6 @@
 $back-color: white;
 $accent: #8855ff;
 //GENERAL WINDOW (NAVBAR + CARD)
-.card{
-  font-family: "Jost", sans-serif;
-  color: #2b2c48;
-}
 
 nav {
   background: #fdfdfd;
@@ -18,9 +14,11 @@ nav {
   height: 44px;
 }
 
-.card {
+.card-about {
+  font-family: "Jost", sans-serif;
+  color: #2b2c48;
   width: 300px;
-  height: 400px;
+  height: 410px;
   border-radius: 10px;
   background: #fdfdfd;
   overflow: hidden;
@@ -37,16 +35,6 @@ li {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 14px;
-  // &:hover {
-  //   color: #2b2c48;
-  //   border-bottom: 3px solid #8a84ff;
-  //   background: linear-gradient(
-  //     to bottom,
-  //     rgba(127, 199, 231, 0) 0%,
-  //     rgba(207, 204, 255, 0.2) 44%,
-  //     rgba(211, 226, 255, 0.4) 100%
-  //   );
-  // }
 }
 
 ul {
@@ -64,14 +52,11 @@ li {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  // flex: 1;
-  // min-width: 0;
   user-select: none;
 }
 
 li.selected {
   background: #eee;
-  // border-radius: 10px;
 }
 
 
@@ -91,7 +76,6 @@ li.selected {
   position: relative;
   display: flex;
   flex-direction: column;
-  // background-color: rgba(255, 255, 255, 1);
   transition: 0.3s;
   box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
   align-items: center;
@@ -103,22 +87,25 @@ li.selected {
     height: 100px;
     width: 100px;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 6px;
   }
 
   h1{
-    font-size: 19px;
+    font-size: 22px;
     margin-bottom: 0;
     padding-bottom: 5px;
+    margin-top: -0.1px;
   }
 
   h2{
     margin: 0;
     padding: 0;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 1px;
     padding: 0 0 20px 0;
     font-weight: 500;
     color: #918c8a;
+    padding-bottom: 25px;
   }
 
   .main-text{
@@ -144,7 +131,7 @@ li.selected {
 
   .contact-card{
     padding-right:225px;
-    padding-bottom: 30px;
+    padding-bottom: 37px;
     background-color: $back-color;
     .github-icon{
       padding-right: 5px;
@@ -169,7 +156,8 @@ li.selected {
 }
 
 //waves animation
-.waves {
+//about tab
+.waves-about-tab {
   position:absolute;
   top: 200px;
   z-index: 102;
@@ -180,12 +168,34 @@ li.selected {
   max-height:60px;
 }
 
-.aux-wave-container{
+.aux-wave-container-about-tab{
   position: absolute;
   z-index: 102;
   width: 300px;
   height: 60px;
   top: 260px;
+  margin: 0;
+  padding: 0;
+  background-color: $back-color;
+}
+
+//exp tab
+.waves-exp-tab {
+  position:absolute;
+  top: 120px;
+  z-index: 102;
+  width: 300px;
+  margin-bottom:0; /*Fix for safari gap*/
+  min-height:50px;
+  max-height:60px;
+}
+
+.aux-wave-container-exp-tab{
+  position: absolute;
+  z-index: 102;
+  width: 300px;
+  height: 40px;
+  top: 175px;
   margin: 0;
   padding: 0;
   background-color: $back-color;
@@ -219,5 +229,69 @@ li.selected {
   }
   100% { 
     transform: translate3d(85px,0,0);
+  }
+}
+
+// EXPERIENCE TAB
+
+.card-experience{
+  font-family: "Jost", sans-serif;
+  width: 300px;
+  height: 550px;
+  border-radius: 10px;
+  background: $back-color;
+  overflow: hidden;
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.experience-tab{
+  height: 508px;
+
+  .experience-profile-div{
+    display: flex;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+
+  .experience-profile-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .experience-profile-picture{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 15px;
+    z-index: 103;
+  }
+
+  h1{
+    font-size: 19px;
+    color: #2b2c48;
+    margin: 0;
+    padding: 0;
+    z-index: 103;
+  }
+
+  h2{
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #918c8a;
+    margin: 0;
+    z-index: 103;
+  }
+}
+
+.work-experience-content{
+  h3{
+    font-family: "Poppins", sans-serif;
+    z-index: 103;
+    font-weight: 700;
+    font-size: 13px;
+    color: #2b2c48;
   }
 }

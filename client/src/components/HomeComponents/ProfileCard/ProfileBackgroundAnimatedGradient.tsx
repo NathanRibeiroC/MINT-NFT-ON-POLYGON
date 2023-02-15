@@ -1,8 +1,12 @@
 import "./_prof_back_an_grad.scss";
 
-function ProfileBackgroundAnimatedGradient() {
+interface ClassName {
+  classTabName: string;
+}
+
+function ProfileBackgroundAnimatedGradient({classTabName}:ClassName) {
   return (
-    <div className="profile-back-grad">
+    <div className={classTabName}>
     </div>
   );
 }

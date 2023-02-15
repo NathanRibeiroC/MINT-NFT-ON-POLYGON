@@ -2,28 +2,23 @@ import "./_profile_card.scss"
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AboutTab from "./AboutTab";
-import ProfileBackgroundAnimatedGradient from "./ProfileBackgroundAnimatedGradient";
-import { ReactComponent as Waves } from '../../../../public/waves.svg';
+import ExperienceTab from "./ExperienceTab";
 
 function ProfileCard() {
   const tabs = [
-    { label: "ABOUT" },
-    { label: "EXPERIENCE" },
-    { label: "CONTACT" }
+    { label: "ABOUT" , card_class_name: "card-about"},
+    { label: "EXPERIENCE" , card_class_name: "card-experience"},
+    { label: "CONTACT" , card_class_name: "card-contact"}
   ];
 
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
   console.log("SELECTED TAB: ",selectedTab);
   return (
-    <div className="card">
+    <div className={selectedTab.card_class_name}>
       <main>
-        <ProfileBackgroundAnimatedGradient/>
-        <div>
-          <Waves className="waves"/>
-          <div className="aux-wave-container"/>
-        </div>
-        <AboutTab/>
+        {selectedTab.label === "ABOUT" ? <AboutTab/> : null}
+        {selectedTab.label === "EXPERIENCE" ? <ExperienceTab/> : null}
       </main>
       <nav>
         <ul>
@@ -42,7 +37,7 @@ function ProfileCard() {
                   exit={{ x: 10, opacity: 1 }}
                   transition={{
                     layout: {
-                      duration: 0.1,
+                      duration: 0.08,
                       ease: 'easeOut'
                     },
                   }}
