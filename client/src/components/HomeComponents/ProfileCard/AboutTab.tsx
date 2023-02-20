@@ -18,7 +18,7 @@ function AboutTab() {
         <img src={profilePicture} className="about-profile-picture"/>
         <h1>William Rocheald</h1>
         <h2>UI DEVELOPER</h2>
-        <div className="main-text">
+        <div className="main-text-about">
             <h3>ABOUT</h3>
             <p>
             Whatever tattooed stumptown art party sriracha gentrify hashtag intelligentsia readymade schlitz brooklyn disrupt.

@@ -8,7 +8,7 @@ function ProfileCard() {
   const tabs = [
     { label: "ABOUT" , card_class_name: "card-about"},
     { label: "EXPERIENCE" , card_class_name: "card-experience"},
-    { label: "CONTACT" , card_class_name: "card-contact"}
+    { label: "CONTACT" , card_class_name: "card-about"}
   ];
 
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
@@ -19,6 +19,7 @@ function ProfileCard() {
       <main>
         {selectedTab.label === "ABOUT" ? <AboutTab/> : null}
         {selectedTab.label === "EXPERIENCE" ? <ExperienceTab/> : null}
+        {selectedTab.label === "CONTACT" ? <AboutTab/> : null}
       </main>
       <nav>
         <ul>
