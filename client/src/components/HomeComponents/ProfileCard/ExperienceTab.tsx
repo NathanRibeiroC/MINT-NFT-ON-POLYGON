@@ -11,7 +11,7 @@ function ExperienceTab() {
           <div className="aux-wave-container-exp-tab"/>
         </div>
         <div className="experience-profile-div">
-          <img src={profilePicture} className="experience-profile-picture"/>
+          <img src={profilePicture} className="profile-picture"/>
           <div className="experience-profile-text">
             <h1>William Rocheald</h1>
             <h2>UI DEVELOPER</h2>

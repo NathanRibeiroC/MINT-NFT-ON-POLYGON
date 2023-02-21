@@ -15,7 +15,7 @@ function AboutTab() {
           <div className="aux-wave-container-about-tab"/>
         </div>
       <div className="about-tab">
-        <img src={profilePicture} className="about-profile-picture"/>
+        <img src={profilePicture} className="profile-picture"/>
         <h1>William Rocheald</h1>
         <h2>UI DEVELOPER</h2>
         <div className="main-text-about">

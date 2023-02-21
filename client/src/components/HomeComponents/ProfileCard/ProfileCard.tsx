@@ -1,6 +1,6 @@
 import "./_profile_card.scss"
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion} from "framer-motion";
 import AboutTab from "./AboutTab";
 import ExperienceTab from "./ExperienceTab";
 
