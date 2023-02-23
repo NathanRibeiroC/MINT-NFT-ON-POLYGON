@@ -1,17 +1,20 @@
-import "./_profile_card.scss"
 import { useState } from "react";
+import React, { Suspense } from "react";
 import profilePicture from "../../../../public/profile img-1.jpg";
 import { ReactComponent as GithubIcon } from '../../../../public/iconmonstr-github-1.svg';
 import { ReactComponent as LinkedinIcon } from '../../../../public/iconmonstr-linkedin-4.svg';
 import ProfileBackgroundAnimatedGradient from "./ProfileBackgroundAnimatedGradient";
 import { ReactComponent as Waves } from '../../../../public/waves.svg';
+import AnimatedWavesComponents from "./AnimatedWavesComponents";
+import useDelay from "../../../hooks/useAnimationDelay"
 
 function AboutTab() {
+
   return (
     <div>
         <ProfileBackgroundAnimatedGradient classTabName="profile-back-grad-about-tab"/>
         <div>
-          <Waves className="waves-about-tab"/>
+          <AnimatedWavesComponents classNameProp="waves-about-tab"/>
           <div className="aux-wave-container-about-tab"/>
         </div>
       <div className="about-tab">

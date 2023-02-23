@@ -1,13 +1,14 @@
 import profilePicture from "../../../../public/profile img-1.jpg";
 import ProfileBackgroundAnimatedGradient from "./ProfileBackgroundAnimatedGradient";
 import { ReactComponent as Waves } from '../../../../public/waves.svg';
+import  AnimatedWavesComponents from "./AnimatedWavesComponents";
 
 function ExperienceTab() {
     return (
       <div className="experience-tab">
         <ProfileBackgroundAnimatedGradient  classTabName="profile-back-grad-experience-tab"/>
         <div>
-          <Waves className="waves-exp-tab"/>
+          <AnimatedWavesComponents classNameProp="waves-exp-tab"/>
           <div className="aux-wave-container-exp-tab"/>
         </div>
         <div className="experience-profile-div">

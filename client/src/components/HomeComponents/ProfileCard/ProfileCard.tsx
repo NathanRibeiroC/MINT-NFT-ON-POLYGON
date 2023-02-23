@@ -1,5 +1,5 @@
 import "./_profile_card.scss"
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import { motion} from "framer-motion";
 import AboutTab from "./AboutTab";
 import ExperienceTab from "./ExperienceTab";
@@ -12,7 +12,7 @@ function ProfileCard() {
   ];
 
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
-
+  
   console.log("SELECTED TAB: ",selectedTab);
   return (
     <div className={selectedTab.card_class_name}>
@@ -30,17 +30,29 @@ function ProfileCard() {
             onClick={() => setSelectedTab(item)}
             >
               {item.label === selectedTab.label ? (
+                // <motion.div 
+                //   className="underline" 
+                //   layoutId="underline" 
+                //   initial={{ x: 0, opacity: 1 }}
+                //   animate={{ x: 0, opacity: 1 }}
+                //   // exit={{ x: 10, opacity: 1 }}
+                //   transition={{
+                //     layout: {
+                //       duration: 0.2,
+                //       ease: 'easeOut'
+                //     },
+                //   }}
+                // />
                 <motion.div 
                   className="underline" 
                   layoutId="underline" 
-                  initial={{ x: 0, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  exit={{ x: 10, opacity: 1 }}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  // exit={{ x: 10, opacity: 1 }}
                   transition={{
-                    layout: {
-                      duration: 0.08,
-                      ease: 'easeOut'
-                    },
+                    duration: 0.8,
+                    delay: 0.5,
+                    ease: [0, 0.71, 0.2, 1.01]
                   }}
                 />
               ) : null}
