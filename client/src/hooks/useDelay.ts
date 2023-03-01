@@ -1,13 +1,13 @@
 import { Suspense, useEffect, useState, Dispatch, SetStateAction } from 'react';
 
-export default function useAnimationDelay(milliseconds: number){
+export default function useDelay(milliseconds: number){
     const [initialState, setInitialState] = useState<boolean>(false);
 
     useEffect(
         () => {
-          let timer1 = setTimeout(() =>  setInitialState(true), milliseconds);
+          let timer = setTimeout(() =>  setInitialState(true), milliseconds);
           return () => {
-            clearTimeout(timer1);
+            clearTimeout(timer);
           };
         },
         []
