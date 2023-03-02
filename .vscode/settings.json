@@ -1,5 +1,6 @@
 {
     "conventionalCommits.scopes": [
-        "CUSTOM HOOK"
+        "CUSTOM HOOK",
+        "UI"
     ]
 }

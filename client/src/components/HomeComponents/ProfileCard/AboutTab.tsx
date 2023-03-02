@@ -4,7 +4,6 @@ import { ReactComponent as LinkedinIcon } from '../../../../public/iconmonstr-li
 import ProfileBackgroundAnimatedGradient from "./ProfileBackgroundAnimatedGradient";
 import AnimatedWavesComponents from "./AnimatedWavesComponents";
 import { motion} from "framer-motion";
-import useDelay from "../../../hooks/useDelay";
 
 function AboutTab() {
 

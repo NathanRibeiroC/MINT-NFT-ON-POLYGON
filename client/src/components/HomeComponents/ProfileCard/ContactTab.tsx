@@ -5,6 +5,7 @@ import { ReactComponent as PhoneIcon } from "../../../../public/phone-icon.svg";
 import { ReactComponent as LocationIcon } from "../../../../public/location-icon.svg";
 import { ReactComponent as EmailIcon } from "../../../../public/email-icon.svg";
 import { motion } from "framer-motion";
+import ClipboardButton from "./ClipboardButton";
 
 function ContactTab() {
   return (
@@ -58,25 +59,29 @@ function ContactTab() {
           <h3>CONTACT</h3>
         </div>
         <div className="contact-data">
-            <div className="contact-single-data">
+            <div className="contact-single-data location">
                 <LocationIcon className="location-icon"/>
-                <div className="data-div"><div/></div>
+                <div className="data-div location"><div/></div>
                 <div className="data-text">Pouso Alegre, Brazil, MG, 37540-000</div>
+                <ClipboardButton/>
             </div>
             <div className="contact-single-data">
                 <PhoneIcon className="phone-icon"/>
-                <div className="data-div"><div/></div>
+                <div className="data-div phone"><div/></div>
                 <div className="data-text">(269) 756-9809</div>
+                <ClipboardButton/>
             </div>
             <div className="contact-single-data">
                 <EmailIcon className="email-icon"/>
                 <div className="data-div"><div/></div>
                 <div className="data-text">nathanazevedo@gec.inatel.br</div>
+                <ClipboardButton/>
             </div>
             <div className="contact-single-data">
                 <EmailIcon className="email-icon"/>
-                <div className="data-div"><div/></div>
-                <div className="data-text">n.ribeiro.cunha.azevedo100@gmail.com</div>
+                <div className="data-div email"><div/></div>
+                <div className="data-text">nathan.ribeir9@gmail.com</div>
+                <ClipboardButton/>
             </div>
         </div>
     </div>
