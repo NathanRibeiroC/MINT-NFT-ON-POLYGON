@@ -1,26 +1,90 @@
 $back-color: #bcbcbc;
+$check-color: #2C974B;
 
 .clipboard-button{
     width: 20px;
     height: 20px;
-    background-color: blue;
     display: flex;
     align-items: center;
     border-radius: 4px;
     border-width: 0;
-    // padding: 0 10px;
     background-color: #e2e2e2;
     border: solid 1px $back-color;
     padding: 2px;
     box-shadow: 2px 6px 14px -6px rgba(0,0,0,0.75);
 
+    &.content-copied{
+        border: solid 1px $check-color;
+    }
+
     &:hover{
         background-color: #d5d3d3;
+
+        .tooltiptext{
+
+            visibility: visible;
+            opacity: 1;
+
+            &:hover{
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+    }
+
+    .tooltiptext{
+        visibility: hidden;
+        width: 50px;
+        background-color: #555;
+        font-size: 10px;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: relative;
+        z-index: 200;
+        bottom: 250%;
+        left: 320%;
+        margin-left: -75px;
+        opacity: 0;
+        transition: opacity 0.3s;
+
+        &:after{
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 60%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        &.copied{
+            visibility: visible;
+            bottom: 200%;
+            opacity: 1;
+
+            &:hover{
+                visibility: visible;
+                opacity: 1;
+            }
+        }
     }
 }
 
 .clipboard-icon{
-    width: 20px;
-    height: 20px;
+    width: 13.5px;
+    height: 13.5px;
+    left: 110%;
+    bottom: -0%;
+    position: relative;
+}
+
+.check-icon{
+    width: 13.5px;
+    height: 13.5px;
+    left: 116%;
+    bottom: -0%;
     position: relative;
 }

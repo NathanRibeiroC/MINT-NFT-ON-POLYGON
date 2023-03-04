@@ -1,5 +1,5 @@
 import "./_prof_back_an_grad.scss";
-import useDelay from '../../../hooks/useDelay';
+import {useEffect, useState } from 'react';
 
 interface ClassName {
   classTabName: string;
@@ -8,8 +8,19 @@ interface ClassName {
 const MILLISECONDS = 3000;
 
 function ProfileBackgroundAnimatedGradient({classTabName}:ClassName) {
+  const [initialState, setInitialState] = useState<boolean>(false);
+
+  useEffect(
+      () => {
+        let timer = setTimeout(() =>  setInitialState(true), MILLISECONDS);
+        return () => {
+          clearTimeout(timer);
+        };
+      },
+      []
+  );
   return (
-    <div className={classTabName} style={{visibility : useDelay(MILLISECONDS) ? 'visible' : 'hidden'}}>
+    <div className={classTabName} style={{visibility : initialState ? 'visible' : 'hidden'}}>
     </div>
   );
 }
