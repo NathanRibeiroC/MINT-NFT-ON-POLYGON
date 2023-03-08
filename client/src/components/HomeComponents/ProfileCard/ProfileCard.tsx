@@ -12,7 +12,7 @@ function ProfileCard() {
     { label: "CONTACT" , card_class_name: "card-contact"}
   ];
 
-  const [selectedTab, setSelectedTab] = useState(tabs[2]);
+  const [selectedTab, setSelectedTab] = useState(tabs[0]);
   
   return (
     <div className={selectedTab.card_class_name}>

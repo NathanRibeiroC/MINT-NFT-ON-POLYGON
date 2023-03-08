@@ -7,10 +7,9 @@ import { ReactComponent as EmailIcon } from "../../../../public/email-icon.svg";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import ClipboardButton from "./ClipboardButton";
+import ContactMeButton from "./ContactMeButton";
 
 function ContactTab() {
-  const [isCopiedToClipboard, setIsCopiedToClipboard] = useState<boolean>(false);
-
   return (
     <div className="contact-tab">
       <ProfileBackgroundAnimatedGradient classTabName="profile-back-grad-experience-tab" />
@@ -80,12 +79,13 @@ function ContactTab() {
                 <div className="data-text email1">nathanazevedo@gec.inatel.br</div>
                 <ClipboardButton dataClassName="data-text email1"/>
             </div>
-            <div className="contact-single-data">
+            <div className="contact-single-data email2">
                 <EmailIcon className="email-icon"/>
                 <div className="data-div email"><div/></div>
                 <div className="data-text email2">nathan.ribeir9@gmail.com</div>
                 <ClipboardButton dataClassName="data-text email2"/>
             </div>
+        <ContactMeButton/>
         </div>
     </div>
   );
