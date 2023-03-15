@@ -4,12 +4,6 @@ import Buttonicon from "../../../../public/contact-me-button-icon.svg";
 
 function ContactMeButton() {
   return (
-    // <button className="contact-button">
-    //   <div className="svg-wrapper">
-    //     <Buttonicon/>
-    //   </div>
-    //   <span className="contact-text">CONTACT ME!</span>
-    // </button>
     <button className="cssbuttons-io-button">
       CONTACT ME!
       <div className="icon">

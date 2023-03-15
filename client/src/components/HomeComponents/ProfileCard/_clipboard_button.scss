@@ -19,12 +19,9 @@ $check-color: #2C974B;
 
     &:hover{
         background-color: #d5d3d3;
-
         .tooltiptext{
-
             visibility: visible;
             opacity: 1;
-
             &:hover{
                 visibility: hidden;
                 opacity: 0;
@@ -42,7 +39,6 @@ $check-color: #2C974B;
         border-radius: 6px;
         padding: 5px;
         position: relative;
-        z-index: 200;
         bottom: 250%;
         left: 320%;
         margin-left: -75px;
