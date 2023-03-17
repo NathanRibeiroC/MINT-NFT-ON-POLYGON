@@ -4,8 +4,12 @@ import { motion} from "framer-motion";
 import AboutTab from "./AboutTab";
 import ExperienceTab from "./ExperienceTab";
 import ContactTab from "./ContactTab";
+import FlipCard from "./SendMessage";
+import { useAppSelector } from "../../../redux/app/hooks";
+import SendMessageCard from "./SendMessage";
 
 function ProfileCard() {
+
   const tabs = [
     { label: "ABOUT" , card_class_name: "card-about"},
     { label: "EXPERIENCE" , card_class_name: "card-experience"},
@@ -13,13 +17,13 @@ function ProfileCard() {
   ];
 
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
-  
-  return (
+
+  const cardTabs = (
     <div className={selectedTab.card_class_name}>
       <main>
         {selectedTab.label === "ABOUT" ? <AboutTab/> : null}
         {selectedTab.label === "EXPERIENCE" ? <ExperienceTab/> : null}
-        {selectedTab.label === "CONTACT" ? <ContactTab/> : null}
+        {(selectedTab.label === "CONTACT") ? <ContactTab/> : null}
       </main>
       <nav>
         <ul>
@@ -47,6 +51,20 @@ function ProfileCard() {
           ))}
         </ul>
       </nav>
+    </div>
+  )
+
+  const sendMessageBackCard = (
+    <div className="back-card">
+      <SendMessageCard/>
+    </div>
+  )
+
+  return (
+    <div className="flip-card-wrapper">
+      <div className="flip-card-content">
+        {true ? cardTabs : sendMessageBackCard}
+      </div>
     </div>
   );
 }

@@ -199,6 +199,8 @@ li.selected {
   max-height:60px;
 }
 
+//exp tab
+
 .aux-wave-container-exp-tab{
   position: absolute;
   z-index: 102;
@@ -457,6 +459,13 @@ li.selected {
   box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: column;
+  // position: absolute;
+  // perspective: 500px;
+
+  // &:hover .content{
+  //   transform: rotateY( 180deg ) ;
+  //   transition: transform 0.5s;
+  // }
 }
 
 .contact-tab{
@@ -539,6 +548,30 @@ li.selected {
       margin-left: 4px;
     }
   }
+}
+
+//FLIP CARD
+
+.flip-card-wrapper {
+    // width: 300px;
+    // height: 390px;
+    float: left;
+    // perspective: 500px;
+    // border-radius: 10px;
+    // box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.flip-card-content{
+  height: 0;
+  margin: 0;
+  padding: 0;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.back-card{
+  transform: rotateY( -180deg );
+  transition: transform 0.5s;
 }
 
 

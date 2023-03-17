@@ -9,7 +9,7 @@ const initialState: FlipState = {
 }; 
 
 const flipProfileCardSlice = createSlice({
-    name: 'flip-profile-card',
+    name: 'flipProfileCard',
     initialState,
     reducers:{
         flipCard(state){
