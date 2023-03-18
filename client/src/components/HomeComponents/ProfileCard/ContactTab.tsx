@@ -7,9 +7,18 @@ import { ReactComponent as EmailIcon } from "../../../../public/email-icon.svg";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import ClipboardButton from "./ClipboardButton";
-import ContactMeButton from "./SubmitButton";
+import ContactMeButton from "../../GeneralComponents/SubmitButton";
+import { useAppDispatch } from "../../../redux/app/hooks";
+import { flipCard } from "../../../redux/feature/flip-profile-card/flip-profile-card";
+
 
 function ContactTab() {
+  
+  const dispatch = useAppDispatch();
+  function handleClickFlipContactCard(){
+    dispatch(flipCard())
+  }
+
   return (
     <div className="contact-tab">
       <ProfileBackgroundAnimatedGradient classTabName="profile-back-grad-experience-tab" />
@@ -84,7 +93,7 @@ function ContactTab() {
                 <div className="data-text email2">nathan.ribeir9@gmail.com</div>
                 <ClipboardButton dataClassName="data-text email2"/>
             </div>
-        <ContactMeButton buttonName={"CONTACT ME!"}/>
+        <ContactMeButton buttonName={"CONTACT ME!"}  handleClickFunction={handleClickFlipContactCard}/>
         </div>
     </div>
   );
