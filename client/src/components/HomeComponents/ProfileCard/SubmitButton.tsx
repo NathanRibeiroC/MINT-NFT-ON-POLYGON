@@ -4,7 +4,11 @@ import Buttonicon from "../../../../public/contact-me-button-icon.svg";
 import { useAppDispatch } from "../../../redux/app/hooks";
 import { flipCard } from "../../../redux/feature/flip-profile-card/flip-profile-card";
 
-function ContactMeButton() {
+interface SubmitButtonPropsType {
+  buttonName: string;
+}
+
+function ContactMeButton(props: SubmitButtonPropsType) {
   const dispatch = useAppDispatch();
 
   function handleClick(){
@@ -13,7 +17,7 @@ function ContactMeButton() {
 
   return (
     <button className="cssbuttons-io-button">
-      CONTACT ME!
+      {props.buttonName}
       <div className="icon" onClick={handleClick}>
         <img className="contact-button-icon" src={Buttonicon} alt="svg-button-icon" />
       </div>

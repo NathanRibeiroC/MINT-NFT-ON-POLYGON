@@ -7,7 +7,7 @@ import { ReactComponent as EmailIcon } from "../../../../public/email-icon.svg";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import ClipboardButton from "./ClipboardButton";
-import ContactMeButton from "./ContactMeButton";
+import ContactMeButton from "./SubmitButton";
 
 function ContactTab() {
   return (
@@ -15,7 +15,6 @@ function ContactTab() {
       <ProfileBackgroundAnimatedGradient classTabName="profile-back-grad-experience-tab" />
       <div>
         <AnimatedWavesComponents classNameProp="waves-exp-tab" />
-        <div className="aux-wave-container-exp-tab" />
       </div>
       <div className="profile-div-small-size">
           <motion.div
@@ -85,7 +84,7 @@ function ContactTab() {
                 <div className="data-text email2">nathan.ribeir9@gmail.com</div>
                 <ClipboardButton dataClassName="data-text email2"/>
             </div>
-        <ContactMeButton/>
+        <ContactMeButton buttonName={"CONTACT ME!"}/>
         </div>
     </div>
   );

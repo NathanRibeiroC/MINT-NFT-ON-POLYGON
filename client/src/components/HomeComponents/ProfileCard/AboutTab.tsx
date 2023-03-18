@@ -12,7 +12,7 @@ function AboutTab() {
         <ProfileBackgroundAnimatedGradient classTabName="profile-back-grad-about-tab"/>
         <div>
           <AnimatedWavesComponents classNameProp="waves-about-tab"/>
-          <div className="aux-wave-container-about-tab"/>
+          {/* <div className="aux-wave-container-about-tab"/> */}
         </div>
       <div className="about-tab">
         <motion.div

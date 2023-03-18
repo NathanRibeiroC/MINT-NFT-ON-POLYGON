@@ -168,7 +168,7 @@ li.selected {
 //about tab
 .waves-about-tab {
   position:absolute;
-  top: 200px;
+  top: 120px;
   z-index: 102;
   width: 300px;
   height:1000px;
@@ -181,8 +181,8 @@ li.selected {
   position: absolute;
   z-index: 102;
   width: 300px;
-  height: 60px;
-  top: 260px;
+  height: 20px;
+  top: 180px;
   margin: 0;
   padding: 0;
   background-color: $back-color;
@@ -191,7 +191,7 @@ li.selected {
 //exp tab
 .waves-exp-tab {
   position:absolute;
-  top: 120px;
+  top: 20px;
   z-index: 102;
   width: 300px;
   margin-bottom:0; /*Fix for safari gap*/
@@ -206,7 +206,7 @@ li.selected {
   z-index: 102;
   width: 300px;
   height: 7px;
-  top: 175px;
+  top: 76px;
   margin: 0;
   padding: 0;
   background-color: $back-color;
@@ -459,13 +459,6 @@ li.selected {
   box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: column;
-  // position: absolute;
-  // perspective: 500px;
-
-  // &:hover .content{
-  //   transform: rotateY( 180deg ) ;
-  //   transition: transform 0.5s;
-  // }
 }
 
 .contact-tab{
@@ -550,15 +543,26 @@ li.selected {
   }
 }
 
+//SEND MESSAGE
+
+.send-message-content{
+  font-family: "Jost", sans-serif;
+  color: #2b2c48;
+  width: $card-width;
+  height: 435px;
+  border-radius: 10px;
+  background-color: $back-color;
+  overflow: hidden;
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  transform: rotateY( 180deg );
+}
+
 //FLIP CARD
 
 .flip-card-wrapper {
-    // width: 300px;
-    // height: 390px;
     float: left;
-    // perspective: 500px;
-    // border-radius: 10px;
-    // box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
 .flip-card-content{
@@ -570,7 +574,7 @@ li.selected {
 }
 
 .back-card{
-  transform: rotateY( -180deg );
+  transform: rotateY( 180deg );
   transition: transform 0.6s;
 }
 

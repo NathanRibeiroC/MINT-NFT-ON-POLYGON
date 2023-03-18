@@ -9,7 +9,6 @@ function ExperienceTab() {
         <ProfileBackgroundAnimatedGradient  classTabName="profile-back-grad-experience-tab"/>
         <div>
           <AnimatedWavesComponents classNameProp="waves-exp-tab"/>
-          <div className="aux-wave-container-exp-tab"/>
         </div>
         <div className="profile-div-small-size">
           <motion.div

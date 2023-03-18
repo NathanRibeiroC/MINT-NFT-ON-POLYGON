@@ -1,8 +1,7 @@
-import "./_send_msg_card.scss";
 import AboutTab from "./AboutTab";
 import ContactTab from "./ContactTab";
 import { useAppSelector } from "../../../redux/app/hooks";
-import ContactMeButton from "./ContactMeButton";
+import ContactMeButton from "./SubmitButton";
 
 function SendMessageCard() {
   const flipcard = useAppSelector((state) => state.flipProfileCard.value);
@@ -12,8 +11,8 @@ function SendMessageCard() {
   return (
     <div className="flip-card-wrapper">
       <div className="flip-card-content">
-        <div className="card-contact">
-          <ContactMeButton/>
+        <div className="send-message-content">
+          <ContactMeButton buttonName={"SEND MESSAGE"}/>
         </div>
       </div>
     </div>
