@@ -17,6 +17,7 @@ function ProfileCard() {
   ];
 
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
+  const flipcard = useAppSelector((state) => state.flipProfileCard.value);
 
   const cardTabs = (
     <div className={selectedTab.card_class_name}>
@@ -63,7 +64,7 @@ function ProfileCard() {
   return (
     <div className="flip-card-wrapper">
       <div className="flip-card-content">
-        {true ? cardTabs : sendMessageBackCard}
+        {!flipcard ? cardTabs : sendMessageBackCard}
       </div>
     </div>
   );
