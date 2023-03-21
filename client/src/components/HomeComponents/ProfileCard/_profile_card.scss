@@ -7,7 +7,7 @@ $card-width: 300px;
 
 //GENERAL WINDOW (NAVBAR + CARD)
 
-nav {
+.card-navbar {
   background: #fdfdfd;
   padding: 0;
   border-radius: 10px;
@@ -576,11 +576,11 @@ li.selected {
 
 .back-card{
   transform: rotateY( 180deg ); //flips back
-  transition: transform 2s;
+  transition: transform .5s;
 }
 
 .front-card{
-  transition: transform 2s; //flip front
+  transition: transform .5s; //flip front
 }
 
 

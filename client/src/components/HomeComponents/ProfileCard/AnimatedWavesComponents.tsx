@@ -8,29 +8,29 @@ interface AnimatedWavesComponentsProps{
   classNameProp: string,
 }
 
-const MILLISECONDS = 2700;
+// const MILLISECONDS = 0;
 
 function AnimatedWavesComponents(props: AnimatedWavesComponentsProps) {
-  const [initialState, setInitialState] = useState<boolean>(false);
+  // const [initialState, setInitialState] = useState<boolean>(false);
 
-  useEffect(
-      () => {
-        let timer = setTimeout(() =>  setInitialState(true), MILLISECONDS);
-        return () => {
-          clearTimeout(timer);
-        };
-      },
-      []
-  );
+  // useEffect(
+  //     () => {
+  //       let timer = setTimeout(() =>  setInitialState(true), MILLISECONDS);
+  //       return () => {
+  //         clearTimeout(timer);
+  //       };
+  //     },
+  //     []
+  // );
 
   return (
       <div>
-        {initialState ? <div>
+        <div>
         <Wave1 className={props.classNameProp}/>
         <Wave2 className={props.classNameProp}/>
         <Wave3 className={props.classNameProp}/>
         <Wave4 className={props.classNameProp}/>
-        </div> : null}
+        </div>
       </div>
     );
   }

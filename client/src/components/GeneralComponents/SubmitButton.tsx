@@ -1,7 +1,5 @@
 import "./_submit_button.scss";
 import Buttonicon from "../../../public/contact-me-button-icon.svg";
-import { useAppDispatch } from "../../redux/app/hooks";
-import { flipCard } from "../../redux/feature/flip-profile-card/flip-profile-card";
 
 interface SubmitButtonPropsType {
   buttonName: string;

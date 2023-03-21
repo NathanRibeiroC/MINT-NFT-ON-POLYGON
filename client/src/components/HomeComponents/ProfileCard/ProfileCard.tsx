@@ -27,7 +27,7 @@ function ProfileCard() {
         {selectedTab.label === "EXPERIENCE" ? <ExperienceTab/> : null}
         {(selectedTab.label === "CONTACT") ? <ContactTab/> : null}
       </main>
-      <nav>
+      <nav className="card-navbar">
         <ul>
           {tabs.map((item) => (
             <li
