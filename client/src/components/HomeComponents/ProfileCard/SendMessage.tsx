@@ -1,13 +1,8 @@
-import AboutTab from "./AboutTab";
-import ContactTab from "./ContactTab";
-import { useAppSelector } from "../../../redux/app/hooks";
 import ContactMeButton from "../../GeneralComponents/SubmitButton";
 import { useAppDispatch } from "../../../redux/app/hooks";
 import { unFlipCard } from "../../../redux/feature/flip-profile-card/flip-profile-card";
-function SendMessageCard() {
-  // const flipcard = useAppSelector((state) => state.flipProfileCard.value);
 
-  // console.log("FLIPCARD: ", flipcard);
+function SendMessageCard() {
 
   const dispatch = useAppDispatch();
   function handleClickUnFlipContactCard(){

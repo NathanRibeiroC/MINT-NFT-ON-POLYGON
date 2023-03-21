@@ -273,6 +273,7 @@ li.selected {
 //EXPERIENCE TAB
 
 .card-experience{
+  transition: rotate;
   font-family: "Jost", sans-serif;
   width: $card-width;
   height: 550px;
@@ -569,13 +570,19 @@ li.selected {
   height: 0;
   margin: 0;
   padding: 0;
-  transition: transform 1s;
+  transition: transform 2s;
   transform-style: preserve-3d;
 }
 
 .back-card{
-  transform: rotateY( 180deg );
-  transition: transform 0.6s;
+  transform: rotateY( 180deg ); //flips back
+  transition: transform 2s;
 }
+
+.front-card{
+  transition: transform 2s; //flip front
+}
+
+
 
 

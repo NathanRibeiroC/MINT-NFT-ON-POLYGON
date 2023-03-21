@@ -20,6 +20,7 @@ function ProfileCard() {
   const flipcard = useAppSelector((state) => state.flipProfileCard.value);
 
   const cardTabs = (
+    <div className="front-card">
     <div className={selectedTab.card_class_name}>
       <main>
         {selectedTab.label === "ABOUT" ? <AboutTab/> : null}
@@ -52,6 +53,7 @@ function ProfileCard() {
           ))}
         </ul>
       </nav>
+    </div>
     </div>
   )
 
