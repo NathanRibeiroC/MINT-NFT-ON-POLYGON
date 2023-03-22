@@ -1,6 +1,10 @@
 import "./_general_form_input.scss";
 
-function GeneralFormInput() {
+interface GeneralFormInputPropsType {
+  labelName: string;
+}
+
+function GeneralFormInput(props: GeneralFormInputPropsType) {
   return (
     <div className="gen-input-group">
       <input
@@ -9,7 +13,7 @@ function GeneralFormInput() {
         name="text"
         className="gen-form-input"
       />
-      <label className="user-label">First Name</label>
+      <label className="user-label">{props.labelName}</label>
     </div>
   );
 }

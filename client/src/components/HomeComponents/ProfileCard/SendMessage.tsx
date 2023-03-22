@@ -2,6 +2,8 @@ import ContactMeButton from "../../GeneralComponents/SubmitButton";
 import { useAppDispatch } from "../../../redux/app/hooks";
 import { unFlipCard } from "../../../redux/feature/flip-profile-card/flip-profile-card";
 import GeneralFormInput from "../../GeneralComponents/GeneralFormInput";
+import useSubmit from "../../../utils/useSubmit";
+import ReturnButton from "../../GeneralComponents/ReturnButton";
 
 function SendMessageCard() {
 
@@ -9,14 +11,22 @@ function SendMessageCard() {
   function handleClickUnFlipContactCard(){
     dispatch(unFlipCard())
   }
-  
+
+  const handleSubmit = useSubmit((values:any) => {
+    console.log('submitted values: ', values);
+  })
+
   return (
     <div className="flip-card-wrapper">
       <div className="flip-card-content">
         <div className="send-message-content">
-          <GeneralFormInput/>
-          {/* <TestComponent/> */}
-          <ContactMeButton buttonName={"SEND MESSAGE"} handleClickFunction={handleClickUnFlipContactCard}/>
+          <form onSubmit={handleSubmit}>
+            <ReturnButton handleClickFunction={handleClickUnFlipContactCard}/>
+            <GeneralFormInput labelName="Full Name"/>
+            <GeneralFormInput labelName="Email"/>
+            <GeneralFormInput labelName="Subject"/>
+            <ContactMeButton type={"submit"} buttonName={"SEND MESSAGE"}/>
+          </form>
         </div>
       </div>
     </div>
