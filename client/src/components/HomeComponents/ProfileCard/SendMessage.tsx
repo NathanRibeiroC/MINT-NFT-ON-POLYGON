@@ -2,6 +2,7 @@ import ContactMeButton from "../../GeneralComponents/SubmitButton";
 import { useAppDispatch } from "../../../redux/app/hooks";
 import { unFlipCard } from "../../../redux/feature/flip-profile-card/flip-profile-card";
 import GeneralFormInput from "../../GeneralComponents/GeneralFormInput";
+import GeneralTextArea from "../../GeneralComponents/GeneralTextArea";
 import useSubmit from "../../../utils/useSubmit";
 import ReturnButton from "../../GeneralComponents/ReturnButton";
 
@@ -25,6 +26,7 @@ function SendMessageCard() {
             <GeneralFormInput labelName="Full Name"/>
             <GeneralFormInput labelName="Email"/>
             <GeneralFormInput labelName="Subject"/>
+            <GeneralTextArea labelName="Write your message here ..."/>
             <ContactMeButton type={"submit"} buttonName={"SEND MESSAGE"}/>
           </form>
         </div>
