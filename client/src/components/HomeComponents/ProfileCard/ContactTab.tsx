@@ -26,43 +26,43 @@ function ContactTab() {
         <AnimatedWavesComponents classNameProp="waves-exp-tab" />
       </div>
       <div className="profile-div-small-size">
-          <motion.div
+          {/* <motion.div
             className="box-profile"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              duration: 1.7,
+              duration: 0.1,
               delay: 1,
               ease: [0, 0.71, 0.2, 1.01]
             }}
-          >
+          > */}
           <img src={profilePicture} className="profile-picture-small-size"/>
-          </motion.div>
+          {/* </motion.div> */}
           <div className="profile-tex-small-size">
-            <motion.div
+            {/* <motion.div
               className="box"
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
-                duration: 0.7,
-                delay: 1.4,
+                duration: 0.1,
+                delay: 0.5,
                 ease: [0, 0.71, 0.2, 1.01]
               }}
-            >
+            > */}
               <h1>William Rocheald</h1>
-            </motion.div>
-          <motion.div
+            {/* </motion.div> */}
+          {/* <motion.div
             className="box"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              duration: 0.7,
+              duration: 0.1,
               delay: 0.9,
               ease: [0, 0.71, 0.2, 1.01]
             }}
-          >
+          > */}
             <h2>UI DEVELOPER</h2>
-          </motion.div>
+          {/* </motion.div> */}
           </div>
         </div>
         <div className="content-small-tab">

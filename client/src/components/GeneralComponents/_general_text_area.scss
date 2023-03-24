@@ -10,10 +10,16 @@
     background: none;
     font-size: 1rem;
     color: black;
-    width: 93%;
+    width: 95%;
     // margin: 12px;
     padding: .5rem;
     transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @-moz-document url-prefix() {
+    .gen-text-area-input {
+      height: 80px;
+    }
   }
   
   .user-label-show {

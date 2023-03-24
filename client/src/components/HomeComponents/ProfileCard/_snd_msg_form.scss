@@ -5,20 +5,16 @@
 }
 
 .row-1{
-    
+    margin: .7em;
 }
 
 .row-2{
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin: 0 1em 0 1em;
+    gap: .5em;
+    margin: 0 1em 0 .7em;
 }
 
 .row-3{
-    margin: 1em 1em 0 1em;
-}
-
-.row-4{
-
+    margin: .5em 1em 1em .7em;
 }

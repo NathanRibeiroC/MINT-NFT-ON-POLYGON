@@ -8,7 +8,7 @@ interface ReturnButtonPropsType {
 function ReturnButton(props: ReturnButtonPropsType) {
 
   return (
-    <button className="return-button">
+    <button className="return-button" onClick={props.handleClickFunction}>
         <img className="back-arrow-icon" src={BackArrow} onClick={props.handleClickFunction}/>
     </button>
   );
