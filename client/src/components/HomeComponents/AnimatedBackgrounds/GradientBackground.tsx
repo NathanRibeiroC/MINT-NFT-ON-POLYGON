@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './_gradient_brackground.scss'
 
-function GradientBackground() {
+function GradientBackground(): JSX.Element {
   const [count, setCount] = useState(0)
 
   return (

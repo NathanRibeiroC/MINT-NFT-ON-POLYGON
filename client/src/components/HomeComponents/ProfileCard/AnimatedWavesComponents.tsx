@@ -10,7 +10,7 @@ interface AnimatedWavesComponentsProps{
 
 // const MILLISECONDS = 0;
 
-function AnimatedWavesComponents(props: AnimatedWavesComponentsProps) {
+function AnimatedWavesComponents(props: AnimatedWavesComponentsProps): JSX.Element {
   // const [initialState, setInitialState] = useState<boolean>(false);
 
   // useEffect(

@@ -5,7 +5,7 @@ interface ClassName {
   classTabName: string;
 }
 
-function ProfileBackgroundAnimatedGradient({classTabName}:ClassName) {
+function ProfileBackgroundAnimatedGradient({classTabName}:ClassName): JSX.Element {
   return (
     <div className={classTabName}>
     </div>

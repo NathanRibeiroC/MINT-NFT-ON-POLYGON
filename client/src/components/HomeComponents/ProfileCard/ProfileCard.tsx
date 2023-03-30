@@ -8,7 +8,7 @@ import FlipCard from "./SendMessage";
 import { useAppSelector } from "../../../redux/app/hooks";
 import SendMessageCard from "./SendMessage";
 
-function ProfileCard() {
+function ProfileCard(): JSX.Element {
 
   const tabs = [
     { label: "ABOUT" , card_class_name: "card-about"},

@@ -3,21 +3,34 @@ import { useAppDispatch } from "../../../redux/app/hooks";
 import { unFlipCard } from "../../../redux/feature/flip-profile-card/flip-profile-card";
 import GeneralFormInput from "../../GeneralComponents/GeneralFormInput";
 import GeneralTextArea from "../../GeneralComponents/GeneralTextArea";
-import useSubmit from "../../../utils/useSubmit";
 import ReturnButton from "../../GeneralComponents/ReturnButton";
-import "./_snd_msg_form.scss"
+import useInputValidation from "../../../utils/useInputValidation";
+import { useState } from "react";
+import "./_snd_msg_form.scss";
 
-function SendMessageCard() {
+function SendMessageCard(): JSX.Element {
+
+  const [inputsValidationStateObj, setInputsValidationStateObj] = 
+  useState<Object[]>([
+    {name:"fullName", validated: false, error: ""},{name:"email", validated: false, error: ""},
+    {name:"subject", validated: false, error: ""},{name:"messageContent", validated: false, error: ""},
+  ]);
 
   const dispatch = useAppDispatch();
-  function handleClickUnFlipContactCard(){
-    dispatch(unFlipCard())
+
+  const handleClickUnFlipContactCard = ():void =>  {
+    dispatch(unFlipCard());
   }
 
-  const handleSubmit = useSubmit((values:any) => {
-    console.log('submitted values: ', values);
-  })
+  const handleSubmit = ():void =>{
 
+  }
+
+  const getInputValue = (eventPayload:string, id:string):void => {
+      useInputValidation(eventPayload, id, inputsValidationStateObj)
+  }
+
+  const testConst = false;
   return (
     <div className="flip-card-wrapper">
       <div className="flip-card-content">
@@ -27,13 +40,16 @@ function SendMessageCard() {
               <ReturnButton handleClickFunction={handleClickUnFlipContactCard}/>
             </div>
             <div className="row-2">
-              <GeneralFormInput labelName="Full Name"/>
-              <GeneralFormInput labelName="Email"/>
-              <GeneralFormInput labelName="Subject"/>
-              <GeneralFormInput labelName="Phone (optional)"/>
+              <GeneralFormInput id="fullName" labelName="Full Name" getInputValue={getInputValue}/>
+              {testConst ? <span>asdadssa</span> : null}
+              <GeneralFormInput id="email" labelName="Email" getInputValue={getInputValue}/>
+              {testConst ? <span>asdadssa</span> : null}
+              <GeneralFormInput id="subject" labelName="Subject" getInputValue={getInputValue}/>
+              {testConst ? <span>asdadssa</span> : null}
             </div>
             <div className="row-3">
-              <GeneralTextArea labelName="Write your message here ..."/>
+              <GeneralTextArea id="messageContent" labelName="Write your message here ..."/>
+              {testConst ? <span>asdadssa</span> : null}
             </div>
             <div className="row-4">
               <ContactMeButton type={"submit"} buttonName={"SEND MESSAGE"}/>

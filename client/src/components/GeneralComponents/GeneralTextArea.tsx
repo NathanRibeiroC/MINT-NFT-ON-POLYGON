@@ -4,6 +4,7 @@ import isEmpty from "../../utils/isEmpty";
 
 interface GeneralFormInputPropsType {
   labelName: string;
+  id: string;
 }
 
 function GeneralTextArea(props: GeneralFormInputPropsType) {
@@ -12,6 +13,7 @@ function GeneralTextArea(props: GeneralFormInputPropsType) {
   return (
     <div className="gen-text-area-group">
       <textarea 
+        id={props.id}
         required={true}
         className="gen-text-area-input"
         onBlur={e => setInputContent(e.target.value)}

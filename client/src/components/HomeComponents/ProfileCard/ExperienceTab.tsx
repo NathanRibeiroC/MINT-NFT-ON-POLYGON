@@ -3,7 +3,7 @@ import ProfileBackgroundAnimatedGradient from "./ProfileBackgroundAnimatedGradie
 import  AnimatedWavesComponents from "./AnimatedWavesComponents";
 import { motion} from "framer-motion";
 
-function ExperienceTab() {
+function ExperienceTab(): JSX.Element {
     return (
       <div className="experience-tab">
         <ProfileBackgroundAnimatedGradient  classTabName="profile-back-grad-experience-tab"/>

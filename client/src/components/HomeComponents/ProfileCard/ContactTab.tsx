@@ -12,7 +12,7 @@ import { useAppDispatch } from "../../../redux/app/hooks";
 import { flipCard } from "../../../redux/feature/flip-profile-card/flip-profile-card";
 
 
-function ContactTab() {
+function ContactTab(): JSX.Element {
   
   const dispatch = useAppDispatch();
   function handleClickFlipContactCard(){

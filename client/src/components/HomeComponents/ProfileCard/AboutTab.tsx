@@ -5,7 +5,7 @@ import ProfileBackgroundAnimatedGradient from "./ProfileBackgroundAnimatedGradie
 import AnimatedWavesComponents from "./AnimatedWavesComponents";
 import { motion} from "framer-motion";
 
-function AboutTab() {
+function AboutTab(): JSX.Element {
 
   return (
     <div>
