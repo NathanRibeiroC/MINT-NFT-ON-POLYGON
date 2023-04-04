@@ -18,7 +18,7 @@ function GeneralFormInput(props: GeneralFormInputPropsType) {
         className="gen-form-input"
         onChange={e => props.getInputValue(e.target.value, props.id)}
       />
-      <label className="user-label">{props.labelName}</label>
+      <label className="user-label" htmlFor={props.id}>{props.labelName}</label>
     </div>
   );
 }
