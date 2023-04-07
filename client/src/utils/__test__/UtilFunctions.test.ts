@@ -8,6 +8,7 @@ describe('Testing isEmpty module', () => {
         {fInput: null, expected: true},
         {fInput: [], expected: true},
         {fInput: "asdas", expected: false},
+        {fInput: {}, expected: true},
       ])('.isEmpty($fInput)', ({fInput, expected}) => {
         expect(isEmpty(fInput)).toBe(expected);
       });

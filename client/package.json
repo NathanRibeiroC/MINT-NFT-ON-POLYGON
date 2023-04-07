@@ -8,7 +8,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "jest",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "coverage -r": "jest --coverage --coverageReporters=html"
   },
   "jest": {
     "testEnvironment": "jsdom",
@@ -16,7 +17,7 @@
       "<rootDir>/jest-setup.ts"
     ],
     "moduleNameMapper": {
-      "\\.(css|scss|jpg|svg|mp3|mp4)$": "identity-obj-proxy"
+      "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|scss)$": "<rootDir>/__mocks__/fileMock.ts"
     }
   },
   "dependencies": {
