@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./_home_navbar.scss";
 import { motion } from "framer-motion";
 
-function HomeNavbar() {
+function HomeNavbar(): JSX.Element {
   return (
       <div>
       {/* <nav className="main-nav">

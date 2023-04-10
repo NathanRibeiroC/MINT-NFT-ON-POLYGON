@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GeneralFormInput.tsx GeneralFormInput.tsx render test 1`] = `
+<div
+  className="gen-input-group"
+>
+  <input
+    className="gen-form-input"
+    id="fullName"
+    onChange={[Function]}
+    required={true}
+    type="text"
+  />
+  <label
+    className="user-label"
+    htmlFor="fullName"
+  >
+    Full Name
+  </label>
+</div>
+`;
+
+exports[`GeneralTextArea.tsx GeneralTextArea.tsx render test 1`] = `
+<div
+  className="gen-text-area-group"
+>
+  <textarea
+    className="gen-text-area-input"
+    id="messageContent"
+    onBlur={[Function]}
+    required={true}
+  />
+  <label
+    className="user-label-show"
+    htmlFor="messageContent"
+  >
+    Write your message here ...
+  </label>
+</div>
+`;
+
+exports[`SubmitButton.tsx SubmitButton.tsx render test 1`] = `
+<div>
+  <button
+    className="cssbuttons-io-button"
+  >
+    TEST SUBMIT BUTTON!
+    <div
+      className="icon"
+      onClick={[MockFunction]}
+    >
+      <img
+        alt="svg-button-icon"
+        className="contact-button-icon"
+        src="test-file-stub"
+      />
+    </div>
+  </button>
+</div>
+`;

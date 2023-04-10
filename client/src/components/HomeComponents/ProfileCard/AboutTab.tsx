@@ -5,14 +5,14 @@ import ProfileBackgroundAnimatedGradient from "./ProfileBackgroundAnimatedGradie
 import AnimatedWavesComponents from "./AnimatedWavesComponents";
 import { motion} from "framer-motion";
 
-function AboutTab() {
+function AboutTab(): JSX.Element {
 
   return (
     <div>
         <ProfileBackgroundAnimatedGradient classTabName="profile-back-grad-about-tab"/>
         <div>
           <AnimatedWavesComponents classNameProp="waves-about-tab"/>
-          <div className="aux-wave-container-about-tab"/>
+          {/* <div className="aux-wave-container-about-tab"/> */}
         </div>
       <div className="about-tab">
         <motion.div

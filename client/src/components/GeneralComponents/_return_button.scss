@@ -1,0 +1,21 @@
+.return-button{
+    border: none;
+    background: #f5a402de;
+    height: 2.4em;
+    width: 2.6em;
+    border-radius: 6px;
+
+    .back-arrow-icon{
+        position: relative;
+        top: 7%;
+    }
+
+    &:hover{
+        transform: scale(1.1);
+        transition: 0.3s linear;
+    }
+
+    &:active{
+        transform: scale(0.95);
+    }
+}

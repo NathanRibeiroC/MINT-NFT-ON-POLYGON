@@ -10,7 +10,7 @@ interface PropsType {
 
 const MILLISECONDS = 800;
 
-function ClipboardButton(props: PropsType) {
+function ClipboardButton(props: PropsType): JSX.Element {
   const [isCopiedToClipboard, setIsCopiedToClipboard] = useState<boolean>(false);
   const [triggerUseEffect, setTriggerUseEffect] = useState<boolean>(false);
 

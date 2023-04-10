@@ -7,7 +7,7 @@ $card-width: 300px;
 
 //GENERAL WINDOW (NAVBAR + CARD)
 
-nav {
+.card-navbar {
   background: #fdfdfd;
   padding: 0;
   border-radius: 10px;
@@ -168,7 +168,7 @@ li.selected {
 //about tab
 .waves-about-tab {
   position:absolute;
-  top: 200px;
+  top: 120px;
   z-index: 102;
   width: 300px;
   height:1000px;
@@ -181,8 +181,8 @@ li.selected {
   position: absolute;
   z-index: 102;
   width: 300px;
-  height: 60px;
-  top: 260px;
+  height: 20px;
+  top: 180px;
   margin: 0;
   padding: 0;
   background-color: $back-color;
@@ -191,7 +191,7 @@ li.selected {
 //exp tab
 .waves-exp-tab {
   position:absolute;
-  top: 120px;
+  top: 20px;
   z-index: 102;
   width: 300px;
   margin-bottom:0; /*Fix for safari gap*/
@@ -199,12 +199,14 @@ li.selected {
   max-height:60px;
 }
 
+//exp tab
+
 .aux-wave-container-exp-tab{
   position: absolute;
   z-index: 102;
   width: 300px;
   height: 7px;
-  top: 175px;
+  top: 76px;
   margin: 0;
   padding: 0;
   background-color: $back-color;
@@ -271,6 +273,7 @@ li.selected {
 //EXPERIENCE TAB
 
 .card-experience{
+  transition: rotate;
   font-family: "Jost", sans-serif;
   width: $card-width;
   height: 550px;
@@ -460,7 +463,7 @@ li.selected {
 }
 
 .contact-tab{
-  padding-bottom: 21px;
+  padding-bottom: 25px;
 }
 
 .contact-data{
@@ -540,5 +543,44 @@ li.selected {
     }
   }
 }
+
+//SEND MESSAGE
+
+.send-message-content{
+  font-family: "Jost", sans-serif;
+  color: #2b2c48;
+  width: $card-width;
+  height: 435px;
+  border-radius: 10px;
+  background-color: $back-color;
+  overflow: hidden;
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2);
+  transform: rotateY( 180deg );
+}
+
+//FLIP CARD
+
+.flip-card-wrapper {
+    float: left;
+}
+
+.flip-card-content{
+  height: 0;
+  margin: 0;
+  padding: 0;
+  transition: transform 2s;
+  transform-style: preserve-3d;
+}
+
+.back-card{
+  transform: rotateY( 180deg ); //flips back
+  transition: transform .5s;
+}
+
+.front-card{
+  transition: transform .5s; //flip front
+}
+
+
 
 

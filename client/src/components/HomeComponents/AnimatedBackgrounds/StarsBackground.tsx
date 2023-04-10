@@ -2,7 +2,7 @@ import { useState} from "react";
 import "./_stars_background.scss";
 import "./_gradient_brackground.scss";
 
-function StarsBackground() {
+function StarsBackground(): JSX.Element {
   const [count, setCount] = useState(0);
 
   return (

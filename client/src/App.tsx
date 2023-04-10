@@ -5,7 +5,7 @@ import './App.scss'
 import {Route, Routes} from "react-router-dom";
 import TestPage from './pages/Home/TestPage';
 
-function App() {
+function App(): JSX.Element {
 
   return (
     <React.Fragment>

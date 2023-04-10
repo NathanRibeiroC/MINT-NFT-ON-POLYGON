@@ -39,7 +39,6 @@
   }
   
   .gradient_background{
-    // background-color: #222;
     perspective: 340px;
     position: absolute;
     inset: 0;
@@ -48,9 +47,4 @@
     align-items: center;
     overflow: hidden;
     z-index: 10001;
-  }
-  
-  /* This is just to transition when you change the viewport size. */
-  * {
-    transition: all 0.25s ease-out;
   }

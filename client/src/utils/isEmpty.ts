@@ -1,8 +1,27 @@
+export default function isEmpty(val: any): boolean {
+  if (val === undefined) return true;
 
-export default function isEmpty(testVar: any):boolean{
-    let isTestVarEmpty = false;
-    if(testVar === '' || testVar === null || testVar === undefined){
-        isTestVarEmpty = true;
-    }
-    return isTestVarEmpty;
+  if (
+    typeof val == "function" ||
+    typeof val == "number" ||
+    typeof val == "boolean" ||
+    Object.prototype.toString.call(val) === "[object Date]"
+  )
+    return false;
+
+  if (val == null || val.length === 0)
+    // null or 0 length array
+    return true;
+
+  if (typeof val == "object") {
+    // empty object
+
+    var r = true;
+
+    for (var f in val) r = false;
+
+    return r;
+  }
+
+  return false;
 }
