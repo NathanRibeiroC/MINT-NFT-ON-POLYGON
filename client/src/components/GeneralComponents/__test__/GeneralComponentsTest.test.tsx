@@ -53,27 +53,27 @@ describe('GeneralTextArea.tsx', () => {
 });
 
 describe('SubmitButton.tsx', () => {
-  test('SubmitButton.tsx render test', () => {
+  test('SubmitButton.tsx render test', () => {  
+    const handleClickFlipContactCard = jest.fn();  
     const tree = renderer
       .create(
         <div>
-          <SubmitButton buttonName={"TEST SUBMIT BUTTON!"}/>
+          <SubmitButton buttonName={"TEST SUBMIT BUTTON!"} handleClickFunction={handleClickFlipContactCard}/>
+        </div>
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  test('SubmitButton.tsx ', () => {  
+    const handleClickFlipContactCard = jest.fn();  
+    const tree = renderer
+      .create(
+        <div>
+          <SubmitButton buttonName={"TEST SUBMIT BUTTON!"} handleClickFunction={handleClickFlipContactCard}/>
         </div>
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
-
-// describe('ReturnButton.tsx', () => {
-//   test('SubmitButton.tsx render test', () => {
-//     const tree = renderer
-//       .create(
-//         <div>
-//           <ReturnButton/>
-//         </div>
-//       )
-//       .toJSON();
-//     expect(tree).toMatchSnapshot();
-//   });
-// });

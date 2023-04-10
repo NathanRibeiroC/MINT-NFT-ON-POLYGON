@@ -39,19 +39,6 @@ exports[`GeneralTextArea.tsx GeneralTextArea.tsx render test 1`] = `
 </div>
 `;
 
-exports[`ReturnButton.tsx SubmitButton.tsx render test 1`] = `
-<div>
-  <button
-    className="return-button"
-  >
-    <img
-      className="back-arrow-icon"
-      src="test-file-stub"
-    />
-  </button>
-</div>
-`;
-
 exports[`SubmitButton.tsx SubmitButton.tsx render test 1`] = `
 <div>
   <button
@@ -60,6 +47,7 @@ exports[`SubmitButton.tsx SubmitButton.tsx render test 1`] = `
     TEST SUBMIT BUTTON!
     <div
       className="icon"
+      onClick={[MockFunction]}
     >
       <img
         alt="svg-button-icon"
