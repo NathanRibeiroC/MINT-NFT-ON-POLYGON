@@ -27,7 +27,7 @@ function SendMessageCard(): JSX.Element {
   }
 
   const getInputValue = (eventPayload:string, id:string):void => {
-      useInputValidation(eventPayload, id, inputsValidationStateObj)
+      // useInputValidation(eventPayload, id, inputsValidationStateObj)
   }
 
   const testConst = false;

@@ -16,9 +16,9 @@ export default function isEmpty(val: any): boolean {
   if (typeof val == "object") {
     // empty object
 
-    var r = true;
+    let r = true;
 
-    for (var f in val) r = false;
+    for (const f in val) r = false;
 
     return r;
   }
