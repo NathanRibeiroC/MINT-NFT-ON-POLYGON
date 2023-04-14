@@ -1,13 +1,12 @@
-import "./_submit_button.scss";
-import Buttonicon from "../../../public/contact-me-button-icon.svg";
+import './_submit_button.scss';
+import Buttonicon from '../../../public/contact-me-button-icon.svg';
 
 interface SubmitButtonPropsType {
   buttonName: string;
-  type ?: "button" | "submit" | "reset" | undefined;
+  type ?: 'button' | 'submit' | 'reset' | undefined;
   handleClickFunction?: () => void;
 }
 function ContactMeButton(props: SubmitButtonPropsType) {
-
   return (
     <button type={props.type} className="cssbuttons-io-button">
       {props.buttonName}

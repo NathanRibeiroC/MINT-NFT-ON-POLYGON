@@ -1,15 +1,13 @@
-import { useState } from "react";
-import "./_home_navbar.scss";
-import { motion } from "framer-motion";
+import './_home_navbar.scss';
 
 function HomeNavbar(): JSX.Element {
   return (
-      <div>
+    <div>
       {/* <nav className="main-nav">
       </nav>
       <nav className="main-nav1">
       </nav> */}
-      </div>
+    </div>
   );
 }
 

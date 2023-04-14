@@ -1,14 +1,12 @@
-import "./_prof_back_an_grad.scss";
-import {useEffect, useState } from 'react';
+import './_prof_back_an_grad.scss';
 
 interface ClassName {
   classTabName: string;
 }
 
-function ProfileBackgroundAnimatedGradient({classTabName}:ClassName): JSX.Element {
+function ProfileBackgroundAnimatedGradient({ classTabName }:ClassName): JSX.Element {
   return (
-    <div className={classTabName}>
-    </div>
+    <div className={classTabName} />
   );
 }
 

@@ -1,25 +1,25 @@
-import {createSlice} from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
-interface FlipState{
-    value: boolean;
+interface FlipState {
+  value: boolean;
 }
 
 const initialState: FlipState = {
-    value: false,
-}; 
+  value: false,
+};
 
 const flipProfileCardSlice = createSlice({
-    name: 'flipProfileCard',
-    initialState,
-    reducers:{
-        flipCard(state){
-            state.value = true;
-        },
-        unFlipCard(state){
-            state.value = false;
-        }
-    }
+  name: 'flipProfileCard',
+  initialState,
+  reducers: {
+    flipCard(state) {
+      state.value = true;
+    },
+    unFlipCard(state) {
+      state.value = false;
+    },
+  },
 });
 
-export const {flipCard, unFlipCard} = flipProfileCardSlice.actions;
+export const { flipCard, unFlipCard } = flipProfileCardSlice.actions;
 export default flipProfileCardSlice.reducer;

@@ -2,37 +2,22 @@ import { ReactComponent as Wave1 } from '../../../../public/wave1.svg';
 import { ReactComponent as Wave2 } from '../../../../public/wave2.svg';
 import { ReactComponent as Wave3 } from '../../../../public/wave3.svg';
 import { ReactComponent as Wave4 } from '../../../../public/wave4.svg';
-import {useEffect, useState} from 'react';
 
-interface AnimatedWavesComponentsProps{
+interface AnimatedWavesComponentsProps {
   classNameProp: string,
 }
 
-// const MILLISECONDS = 0;
-
-function AnimatedWavesComponents(props: AnimatedWavesComponentsProps): JSX.Element {
-  // const [initialState, setInitialState] = useState<boolean>(false);
-
-  // useEffect(
-  //     () => {
-  //       let timer = setTimeout(() =>  setInitialState(true), MILLISECONDS);
-  //       return () => {
-  //         clearTimeout(timer);
-  //       };
-  //     },
-  //     []
-  // );
-
+function AnimatedWavesComponents({ classNameProp }: AnimatedWavesComponentsProps): JSX.Element {
   return (
+    <div>
       <div>
-        <div>
-        <Wave1 className={props.classNameProp}/>
-        <Wave2 className={props.classNameProp}/>
-        <Wave3 className={props.classNameProp}/>
-        <Wave4 className={props.classNameProp}/>
-        </div>
+        <Wave1 className={classNameProp} />
+        <Wave2 className={classNameProp} />
+        <Wave3 className={classNameProp} />
+        <Wave4 className={classNameProp} />
       </div>
-    );
-  }
-  
-  export default AnimatedWavesComponents;
+    </div>
+  );
+}
+
+export default AnimatedWavesComponents;

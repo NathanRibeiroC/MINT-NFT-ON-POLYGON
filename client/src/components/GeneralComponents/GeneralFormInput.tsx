@@ -1,5 +1,4 @@
-import "./_general_form_input.scss";
-import { useState } from "react";
+import './_general_form_input.scss';
 
 interface GeneralFormInputPropsType {
   labelName: string;
@@ -7,18 +6,17 @@ interface GeneralFormInputPropsType {
   getInputValue: (input:string, id:string) => void;
 }
 
-function GeneralFormInput(props: GeneralFormInputPropsType) {
-  const [firstName, setFirstName] = useState(''); // Declare a state variable...
+function GeneralFormInput({ id, labelName, getInputValue }: GeneralFormInputPropsType) {
   return (
     <div className="gen-input-group">
       <input
-        id={props.id}
-        required={true}
+        id={id}
+        required
         type="text"
         className="gen-form-input"
-        onChange={e => props.getInputValue(e.target.value, props.id)}
+        onChange={(e) => getInputValue(e.target.value, id)}
       />
-      <label className="user-label" htmlFor={props.id}>{props.labelName}</label>
+      <label className="user-label" htmlFor={id}>{labelName}</label>
     </div>
   );
 }

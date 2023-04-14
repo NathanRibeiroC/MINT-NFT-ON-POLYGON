@@ -1,20 +1,15 @@
-import HomePage from './pages/Home/HomePage'
-import React from "react";
-import HomeNavbar from './components/HomeComponents/HomeNavbar/HomeNavbar'
-import './App.scss'
-import {Route, Routes} from "react-router-dom";
+import { Route, Routes } from 'react-router-dom';
+import HomePage from './pages/Home/HomePage';
+import './App.scss';
 import TestPage from './pages/Home/TestPage';
 
 function App(): JSX.Element {
-
   return (
-    <React.Fragment>
-      <Routes>
-        <Route path="" element={<TestPage/>}/>
-        <Route path="/h" element={<HomePage/>}/>
-      </Routes>
-    </React.Fragment>
-  )
+    <Routes>
+      <Route path="" element={<TestPage />} />
+      <Route path="/h" element={<HomePage />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
