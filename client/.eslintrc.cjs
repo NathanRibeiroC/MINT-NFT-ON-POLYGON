@@ -1,6 +1,29 @@
 module.exports = {
-    extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
-    parser: '@typescript-eslint/parser',
-    plugins: ['@typescript-eslint'],
-    root: true,
-  };
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: [
+    'airbnb',
+    'airbnb-typescript',
+    'airbnb/hooks',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
+  overrides: [
+    {
+      "files": ["*.tsx", "*.ts"]
+    }
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: './tsconfig.json',
+  },
+  plugins: ['react', '@typescript-eslint'],
+  rules: {
+    'react/react-in-jsx-scope': 0,
+    "no-param-reassign": [2, { "props": false }]
+  },
+};
