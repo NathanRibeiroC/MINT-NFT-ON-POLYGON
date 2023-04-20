@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import profilePicture from '../../../../public/profile img-1.jpg';
 import ProfileBackgroundAnimatedGradient from './ProfileBackgroundAnimatedGradient';
 import AnimatedWavesComponents from './AnimatedWavesComponents';
@@ -11,9 +12,14 @@ import { flipCard } from '../../../redux/feature/flip-profile-card/flip-profile-
 
 function ContactTab(): JSX.Element {
   const dispatch = useAppDispatch();
-  function handleClickFlipContactCard() {
+
+  // function handleClickFlipContactCard() {
+  //   dispatch(flipCard());
+  // }
+
+  const handleClickFlipContactCard = useCallback(() => {
     dispatch(flipCard());
-  }
+  }, [dispatch]);
 
   return (
     <div className="contact-tab">
@@ -32,7 +38,7 @@ function ContactTab(): JSX.Element {
               ease: [0, 0.71, 0.2, 1.01]
             }}
           > */}
-        <img src={profilePicture} className="profile-picture-small-size" />
+        <img src={profilePicture} alt="prof_pic" className="profile-picture-small-size" />
         {/* </motion.div> */}
         <div className="profile-tex-small-size">
           {/* <motion.div

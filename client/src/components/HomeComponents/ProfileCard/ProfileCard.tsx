@@ -29,9 +29,11 @@ function ProfileCard(): JSX.Element {
           <ul>
             {tabs.map((item) => (
               <li
+                role="tab"
                 key={item.label}
                 className={item.label === selectedTab.label ? 'selected' : ''}
                 onClick={() => setSelectedTab(item)}
+                onKeyDown={() => setSelectedTab(item)}
               >
                 {item.label === selectedTab.label ? (
                   <motion.div

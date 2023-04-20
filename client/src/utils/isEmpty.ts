@@ -1,4 +1,16 @@
-export default function isEmpty(val: any): boolean {
+type IsEmptyParameterTypes =
+  | undefined
+  | ((...args: unknown[]) => unknown)
+  | number
+  | boolean
+  | Date
+  | null
+  | string[]
+  | object
+  | unknown
+  | Record<string, never>;
+
+export default function isEmpty(val: IsEmptyParameterTypes): boolean {
   if (val === undefined) return true;
 
   if (
@@ -8,17 +20,26 @@ export default function isEmpty(val: any): boolean {
     || Object.prototype.toString.call(val) === '[object Date]'
   ) return false;
 
-  if (val == null || val.length === 0)
   // null or 0 length array
-  { return true; }
+  if (val == null) {
+    return true;
+  }
+
+  if (Array.isArray(val)) {
+    if (val.length === 0) {
+      return true;
+    }
+  }
 
   if (typeof val === 'object') {
     // empty object
-
+    const keys = Object.keys(val);
     let r = true;
-
-    for (const f in val) r = false;
-
+    keys.forEach((key) => {
+      if (Object.prototype.hasOwnProperty.call(val, key)) {
+        r = false;
+      }
+    });
     return r;
   }
 

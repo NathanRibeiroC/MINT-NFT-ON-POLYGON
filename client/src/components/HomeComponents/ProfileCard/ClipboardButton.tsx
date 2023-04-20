@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-
 import { ReactComponent as ClipboardIcon } from '../../../../public/clipboard-icon.svg';
 import { ReactComponent as CheckIcon } from '../../../../public/check-icon.svg';
 import './_clipboard_button.scss';
@@ -38,6 +37,7 @@ function ClipboardButton({ dataClassName }: PropsType): JSX.Element {
           clearTimeout(timer);
         };
       }
+      return undefined;
     },
     [triggerUseEffect],
   );
