@@ -23,7 +23,7 @@ function ProfileCard(): JSX.Element {
         <main>
           {selectedTab.label === 'ABOUT' ? <AboutTab /> : null}
           {selectedTab.label === 'EXPERIENCE' ? <ExperienceTab /> : null}
-          {(selectedTab.label === 'CONTACT') ? <ContactTab /> : null}
+          {selectedTab.label === 'CONTACT' ? <ContactTab /> : null}
         </main>
         <nav className="card-navbar">
           <ul>

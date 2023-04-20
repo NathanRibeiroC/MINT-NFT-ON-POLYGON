@@ -18,7 +18,14 @@ function GeneralTextArea({ id, labelName }: GeneralFormInputPropsType) {
         className="gen-text-area-input"
         onBlur={(e) => setInputContent(e.target.value)}
       />
-      <label htmlFor={id} className={isEmpty(inputContent) ? 'user-label-show' : 'user-label-hidde'}>{labelName}</label>
+      <label
+        htmlFor={id}
+        className={
+          isEmpty(inputContent) ? 'user-label-show' : 'user-label-hidde'
+        }
+      >
+        {labelName}
+      </label>
     </div>
   );
 }

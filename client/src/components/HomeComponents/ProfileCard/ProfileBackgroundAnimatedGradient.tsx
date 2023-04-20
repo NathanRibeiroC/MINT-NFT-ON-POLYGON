@@ -4,10 +4,10 @@ interface ClassName {
   classTabName: string;
 }
 
-function ProfileBackgroundAnimatedGradient({ classTabName }:ClassName): JSX.Element {
-  return (
-    <div className={classTabName} />
-  );
+function ProfileBackgroundAnimatedGradient({
+  classTabName,
+}: ClassName): JSX.Element {
+  return <div className={classTabName} />;
 }
 
 export default ProfileBackgroundAnimatedGradient;

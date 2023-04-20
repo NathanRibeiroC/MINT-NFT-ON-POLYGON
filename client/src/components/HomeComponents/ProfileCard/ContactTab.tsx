@@ -38,7 +38,11 @@ function ContactTab(): JSX.Element {
               ease: [0, 0.71, 0.2, 1.01]
             }}
           > */}
-        <img src={profilePicture} alt="prof_pic" className="profile-picture-small-size" />
+        <img
+          src={profilePicture}
+          alt="prof_pic"
+          className="profile-picture-small-size"
+        />
         {/* </motion.div> */}
         <div className="profile-tex-small-size">
           {/* <motion.div
@@ -73,29 +77,42 @@ function ContactTab(): JSX.Element {
       <div className="contact-data">
         <div className="contact-single-data location">
           <LocationIcon className="location-icon" />
-          <div className="data-div location"><div /></div>
-          <div className="data-text location">Pouso Alegre, Brazil, MG, 37540-000</div>
+          <div className="data-div location">
+            <div />
+          </div>
+          <div className="data-text location">
+            Pouso Alegre, Brazil, MG, 37540-000
+          </div>
           <ClipboardButton dataClassName="data-text location" />
         </div>
         <div className="contact-single-data">
           <PhoneIcon className="phone-icon" />
-          <div className="data-div phone"><div /></div>
+          <div className="data-div phone">
+            <div />
+          </div>
           <div className="data-text phone">(269) 756-9809</div>
           <ClipboardButton dataClassName="data-text phone" />
         </div>
         <div className="contact-single-data">
           <EmailIcon className="email-icon" />
-          <div className="data-div"><div /></div>
+          <div className="data-div">
+            <div />
+          </div>
           <div className="data-text email1">nathanazevedo@gec.inatel.br</div>
           <ClipboardButton dataClassName="data-text email1" />
         </div>
         <div className="contact-single-data email2">
           <EmailIcon className="email-icon" />
-          <div className="data-div email"><div /></div>
+          <div className="data-div email">
+            <div />
+          </div>
           <div className="data-text email2">nathan.ribeir9@gmail.com</div>
           <ClipboardButton dataClassName="data-text email2" />
         </div>
-        <ContactMeButton buttonName="CONTACT ME!" handleClickFunction={handleClickFlipContactCard} />
+        <ContactMeButton
+          buttonName="CONTACT ME!"
+          handleClickFunction={handleClickFlipContactCard}
+        />
       </div>
     </div>
   );

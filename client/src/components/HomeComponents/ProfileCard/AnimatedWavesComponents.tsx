@@ -4,10 +4,12 @@ import { ReactComponent as Wave3 } from '../../../../public/wave3.svg';
 import { ReactComponent as Wave4 } from '../../../../public/wave4.svg';
 
 interface AnimatedWavesComponentsProps {
-  classNameProp: string,
+  classNameProp: string;
 }
 
-function AnimatedWavesComponents({ classNameProp }: AnimatedWavesComponentsProps): JSX.Element {
+function AnimatedWavesComponents({
+  classNameProp,
+}: AnimatedWavesComponentsProps): JSX.Element {
   return (
     <div>
       <div>

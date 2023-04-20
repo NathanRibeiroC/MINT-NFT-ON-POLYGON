@@ -1,4 +1,4 @@
-export default function useInputValidation():object {
+export default function useInputValidation(): object {
   // if(id === "email"){
   //     if(payload.length > 200){
   //     }

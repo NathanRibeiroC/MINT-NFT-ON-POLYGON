@@ -10,7 +10,11 @@ describe('GeneralFormInput.tsx', () => {
     const getInputValue = jest.fn((x) => x);
     const tree = renderer
       .create(
-        <GeneralFormInput id="fullName" labelName="Full Name" getInputValue={getInputValue} />,
+        <GeneralFormInput
+          id="fullName"
+          labelName="Full Name"
+          getInputValue={getInputValue}
+        />
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
@@ -20,7 +24,11 @@ describe('GeneralFormInput.tsx', () => {
     const getInputValue = jest.fn((x) => x);
     // ARRANGE
     render(
-      <GeneralFormInput id="fullName" labelName="Full Name" getInputValue={getInputValue} />,
+      <GeneralFormInput
+        id="fullName"
+        labelName="Full Name"
+        getInputValue={getInputValue}
+      />
     );
     const input = screen.getByLabelText('Full Name');
     fireEvent.change(input, { target: { value: '23' } });
@@ -33,7 +41,10 @@ describe('GeneralTextArea.tsx', () => {
   test('GeneralTextArea.tsx render test', () => {
     const tree = renderer
       .create(
-        <GeneralTextArea id="messageContent" labelName="Write your message here ..." />,
+        <GeneralTextArea
+          id="messageContent"
+          labelName="Write your message here ..."
+        />
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
@@ -41,7 +52,12 @@ describe('GeneralTextArea.tsx', () => {
 
   test('GeneralTextArea.tsx placeholder disappear when writing some test', () => {
     // ARRANGE
-    render(<GeneralTextArea id="messageContent" labelName="Write your message here ..." />);
+    render(
+      <GeneralTextArea
+        id="messageContent"
+        labelName="Write your message here ..."
+      />
+    );
     // expect(screen.getByText("Write your message here ...")).toBeInTheDocument();
     const input = screen.getByLabelText('Write your message here ...');
     fireEvent.blur(input, { target: { value: 'Test input' } });
@@ -56,8 +72,11 @@ describe('SubmitButton.tsx', () => {
     const tree = renderer
       .create(
         <div>
-          <SubmitButton buttonName="TEST SUBMIT BUTTON!" handleClickFunction={handleClickFlipContactCard} />
-        </div>,
+          <SubmitButton
+            buttonName="TEST SUBMIT BUTTON!"
+            handleClickFunction={handleClickFlipContactCard}
+          />
+        </div>
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
@@ -68,8 +87,11 @@ describe('SubmitButton.tsx', () => {
     const tree = renderer
       .create(
         <div>
-          <SubmitButton buttonName="TEST SUBMIT BUTTON!" handleClickFunction={handleClickFlipContactCard} />
-        </div>,
+          <SubmitButton
+            buttonName="TEST SUBMIT BUTTON!"
+            handleClickFunction={handleClickFlipContactCard}
+          />
+        </div>
       )
       .toJSON();
     expect(tree).toMatchSnapshot();

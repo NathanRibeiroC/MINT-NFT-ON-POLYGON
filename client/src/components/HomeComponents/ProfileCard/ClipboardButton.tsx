@@ -5,17 +5,19 @@ import './_clipboard_button.scss';
 import isEmpty from '../../../utils/isEmpty';
 
 interface PropsType {
-  dataClassName: string,
+  dataClassName: string;
 }
 
 const MILLISECONDS = 800;
 
 function ClipboardButton({ dataClassName }: PropsType): JSX.Element {
-  const [isCopiedToClipboard, setIsCopiedToClipboard] = useState<boolean>(false);
+  const [isCopiedToClipboard, setIsCopiedToClipboard] =
+    useState<boolean>(false);
   const [triggerUseEffect, setTriggerUseEffect] = useState<boolean>(false);
 
   const copyToClipboard = () => {
-    const classTextContent = document.getElementsByClassName(dataClassName)[0].textContent;
+    const classTextContent =
+      document.getElementsByClassName(dataClassName)[0].textContent;
 
     if (!isEmpty(classTextContent)) {
       navigator.clipboard.writeText(classTextContent || '');
@@ -29,18 +31,15 @@ function ClipboardButton({ dataClassName }: PropsType): JSX.Element {
     setIsCopiedToClipboard(false);
   };
 
-  useEffect(
-    () => {
-      if (triggerUseEffect) {
-        const timer = setTimeout(() => resetState(), MILLISECONDS);
-        return () => {
-          clearTimeout(timer);
-        };
-      }
-      return undefined;
-    },
-    [triggerUseEffect],
-  );
+  useEffect(() => {
+    if (triggerUseEffect) {
+      const timer = setTimeout(() => resetState(), MILLISECONDS);
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+    return undefined;
+  }, [triggerUseEffect]);
 
   const copyToClipboardTextAdd = (
     <span className="tooltiptext">
@@ -51,15 +50,25 @@ function ClipboardButton({ dataClassName }: PropsType): JSX.Element {
   );
 
   const copiedToClipboardTextAdd = (
-    <span className="tooltiptext copied">
-      Copied !
-    </span>
+    <span className="tooltiptext copied">Copied !</span>
   );
 
   return (
-    <button type="button" className={isCopiedToClipboard ? 'clipboard-button content-copied' : 'clipboard-button'} onClick={copyToClipboard}>
+    <button
+      type="button"
+      className={
+        isCopiedToClipboard
+          ? 'clipboard-button content-copied'
+          : 'clipboard-button'
+      }
+      onClick={copyToClipboard}
+    >
       {isCopiedToClipboard ? copiedToClipboardTextAdd : copyToClipboardTextAdd}
-      {isCopiedToClipboard ? <CheckIcon className="check-icon" /> : <ClipboardIcon className="clipboard-icon" />}
+      {isCopiedToClipboard ? (
+        <CheckIcon className="check-icon" />
+      ) : (
+        <ClipboardIcon className="clipboard-icon" />
+      )}
     </button>
   );
 }

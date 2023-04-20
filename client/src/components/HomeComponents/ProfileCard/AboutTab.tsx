@@ -53,15 +53,23 @@ function AboutTab(): JSX.Element {
         <div className="main-text-about">
           <h3>ABOUT</h3>
           <p>
-            Whatever tattooed stumptown art party sriracha gentrify
-            hashtag intelligentsia readymade schlitz brooklyn disrupt.
+            Whatever tattooed stumptown art party sriracha gentrify hashtag
+            intelligentsia readymade schlitz brooklyn disrupt.
           </p>
         </div>
         <div className="social-media-card">
-          <a href="https://github.com/NathanRibeiroC?tab=overview&from=2022-08-01&to=2022-08-07" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/NathanRibeiroC?tab=overview&from=2022-08-01&to=2022-08-07"
+            target="_blank"
+            rel="noreferrer"
+          >
             <GithubIcon className="github-icon" />
           </a>
-          <a href="https://github.com/NathanRibeiroC?tab=overview&from=2022-08-01&to=2022-08-07" target="_blank" rel="noreferrer">
+          <a
+            href="https://github.com/NathanRibeiroC?tab=overview&from=2022-08-01&to=2022-08-07"
+            target="_blank"
+            rel="noreferrer"
+          >
             <LinkedinIcon className="linkedin-icon" />
           </a>
         </div>
