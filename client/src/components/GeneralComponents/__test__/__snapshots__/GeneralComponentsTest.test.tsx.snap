@@ -39,15 +39,43 @@ exports[`GeneralTextArea.tsx GeneralTextArea.tsx render test 1`] = `
 </div>
 `;
 
-exports[`SubmitButton.tsx SubmitButton.tsx render test 1`] = `
+exports[`SubmitButton.tsx SubmitButton.tsx  1`] = `
 <div>
   <button
     className="cssbuttons-io-button"
+    type="button"
   >
     TEST SUBMIT BUTTON!
     <div
       className="icon"
       onClick={[MockFunction]}
+      onKeyDown={[MockFunction]}
+      role="button"
+      tabIndex={0}
+    >
+      <img
+        alt="svg-button-icon"
+        className="contact-button-icon"
+        src="test-file-stub"
+      />
+    </div>
+  </button>
+</div>
+`;
+
+exports[`SubmitButton.tsx SubmitButton.tsx render test 1`] = `
+<div>
+  <button
+    className="cssbuttons-io-button"
+    type="button"
+  >
+    TEST SUBMIT BUTTON!
+    <div
+      className="icon"
+      onClick={[MockFunction]}
+      onKeyDown={[MockFunction]}
+      role="button"
+      tabIndex={0}
     >
       <img
         alt="svg-button-icon"

@@ -11,6 +11,8 @@ type IsEmptyParameterTypes =
   | Record<string, never>;
 
 export default function isEmpty(val: IsEmptyParameterTypes): boolean {
+  if (val === '' || val === "") return true;
+  
   if (val === undefined) return true;
 
   if (
