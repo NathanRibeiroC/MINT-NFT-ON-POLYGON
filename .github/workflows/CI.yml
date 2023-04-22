@@ -22,6 +22,11 @@ jobs:
         with:
           cmd: install # will run `yarn install` command
 
+      - name: Install dependencies
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: yarn install # will run `yarn install` command
+
       # run tests
       - name: Test the app
         uses: borales/actions-yarn@v4
