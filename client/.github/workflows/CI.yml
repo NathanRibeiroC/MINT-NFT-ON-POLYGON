@@ -1,0 +1,42 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [test-setup]
+
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set Node.js 19.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19.x
+
+      # installs yarn
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install # will run `yarn install` command
+
+      - name: Install dependencies
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: yarn install # will run `yarn install` command
+
+      # run tests
+      - name: Test the app
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: jest # will run `yarn test` command
+          dir: 'client/src'
+
+      # runs lint
+      - name: Run ESLint
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: eslint . --ext .js,.jsx,.ts,.tsx
+          dir: 'client/src' # will run `yarn test` in `frontend` sub folder
