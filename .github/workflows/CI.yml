@@ -23,7 +23,7 @@ jobs:
 
       - name: Do something with folder1
         working-directory: ./client
-        run: yarn test
+        run: yarn lint
       # run tests
       # - name: Test the app
       #   uses: borales/actions-yarn@v4
