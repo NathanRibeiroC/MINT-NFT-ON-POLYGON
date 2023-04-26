@@ -22,9 +22,8 @@ jobs:
           cmd: install # will run `yarn install` command
 
       - name: Do something with folder1
-        uses: borales/actions-yarn@v4
         working-directory: ./client
-        run: test
+        run: yarn test
       # run tests
       # - name: Test the app
       #   uses: borales/actions-yarn@v4
