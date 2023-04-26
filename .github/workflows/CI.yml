@@ -27,9 +27,11 @@ jobs:
         run: yarn install
 
       # Run tests
-      - name: Install dependencies
+      - name: Run tests
         working-directory: ./client/src
         run: yarn test
+
+      
       # run tests
       # - name: Test the app
       #   uses: borales/actions-yarn@v4
