@@ -23,7 +23,7 @@ jobs:
 
       - name: Do something with folder1
         run: |
-          cd client
+          cd client && yarn test
       # run tests
       # - name: Test the app
       #   uses: borales/actions-yarn@v4
