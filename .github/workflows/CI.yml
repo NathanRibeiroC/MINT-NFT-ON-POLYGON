@@ -22,16 +22,11 @@ jobs:
         with:
           cmd: install # will run `yarn install` command
 
-      # install dependencies
-      - name: Install dependencies
-        with:
-          cmd: yarn install # will run `yarn install` command
-
       # run tests
       - name: Test the app
         uses: borales/actions-yarn@v4
         with:
-          cmd: jest # will run `yarn test` command
+          cmd: test # will run `yarn test` command
           dir: 'client/src'
 
       # runs lint
