@@ -31,7 +31,12 @@ jobs:
         working-directory: ./client/src
         run: yarn test
 
-      # Run tests
+      # Run eslint
       - name: Run eslint
         working-directory: ./client
         run: yarn lint
+
+      # Run prettier
+      - name: Run prettier
+        working-directory: ./client
+        run: yarn style:check
