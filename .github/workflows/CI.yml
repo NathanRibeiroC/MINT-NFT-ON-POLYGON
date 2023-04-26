@@ -31,6 +31,11 @@ jobs:
         working-directory: ./client/src
         run: yarn test
 
+      # Run tests
+      - name: Run eslint
+        working-directory: ./client
+        run: yarn lint
+
       
       # run tests
       # - name: Test the app
