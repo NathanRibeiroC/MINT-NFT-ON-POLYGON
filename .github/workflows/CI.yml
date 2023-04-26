@@ -15,15 +15,21 @@ jobs:
         with:
           node-version: 19.x
 
-      # installs yarn
+      # Installs yarn
       - name: Run install
         uses: borales/actions-yarn@v4
         with:
           cmd: install # will run `yarn install` command
 
-      - name: Do something with folder1
+      # Install dependencies
+      - name: Install dependencies
         working-directory: ./client
         run: yarn install
+
+      # Run tests
+      - name: Install dependencies
+        working-directory: ./client/src
+        run: yarn test
       # run tests
       # - name: Test the app
       #   uses: borales/actions-yarn@v4
