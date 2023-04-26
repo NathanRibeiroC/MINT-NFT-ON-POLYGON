@@ -35,18 +35,3 @@ jobs:
       - name: Run eslint
         working-directory: ./client
         run: yarn lint
-
-      
-      # run tests
-      # - name: Test the app
-      #   uses: borales/actions-yarn@v4
-      #   with:
-      #     cmd: test # will run `yarn test` command
-      #     dir: client/src/*
-
-      # # runs lint
-      # - name: Run ESLint
-      #   uses: borales/actions-yarn@v4
-      #   with:
-      #     cmd: eslint . --ext .js,.jsx,.ts,.tsx
-      #     dir: 'client/src' # will run `yarn test` in `frontend` sub folder
