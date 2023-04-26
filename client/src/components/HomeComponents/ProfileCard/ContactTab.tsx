@@ -1,14 +1,14 @@
-import { useCallback } from 'react';
-import profilePicture from '../../../../public/profile img-1.jpg';
-import ProfileBackgroundAnimatedGradient from './ProfileBackgroundAnimatedGradient';
-import AnimatedWavesComponents from './AnimatedWavesComponents';
-import { ReactComponent as PhoneIcon } from '../../../../public/phone-icon.svg';
-import { ReactComponent as LocationIcon } from '../../../../public/location-icon.svg';
-import { ReactComponent as EmailIcon } from '../../../../public/email-icon.svg';
-import ClipboardButton from './ClipboardButton';
-import ContactMeButton from '../../GeneralComponents/SubmitButton';
-import { useAppDispatch } from '../../../redux/app/hooks';
-import { flipCard } from '../../../redux/feature/flip-profile-card/flip-profile-card';
+import { useCallback } from "react";
+import profilePicture from "../../../../public/profile img-1.jpg";
+import ProfileBackgroundAnimatedGradient from "./ProfileBackgroundAnimatedGradient";
+import AnimatedWavesComponents from "./AnimatedWavesComponents";
+import { ReactComponent as PhoneIcon } from "../../../../public/phone-icon.svg";
+import { ReactComponent as LocationIcon } from "../../../../public/location-icon.svg";
+import { ReactComponent as EmailIcon } from "../../../../public/email-icon.svg";
+import ClipboardButton from "./ClipboardButton";
+import ContactMeButton from "../../GeneralComponents/SubmitButton";
+import { useAppDispatch } from "../../../redux/app/hooks";
+import { flipCard } from "../../../redux/feature/flip-profile-card/flip-profile-card";
 
 function ContactTab(): JSX.Element {
   const dispatch = useAppDispatch();

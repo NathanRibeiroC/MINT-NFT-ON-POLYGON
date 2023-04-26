@@ -1,17 +1,17 @@
-import './_profile_card.scss';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import AboutTab from './AboutTab';
-import ExperienceTab from './ExperienceTab';
-import ContactTab from './ContactTab';
-import { useAppSelector } from '../../../redux/app/hooks';
-import SendMessageCard from './SendMessage';
+import "./_profile_card.scss";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import AboutTab from "./AboutTab";
+import ExperienceTab from "./ExperienceTab";
+import ContactTab from "./ContactTab";
+import { useAppSelector } from "../../../redux/app/hooks";
+import SendMessageCard from "./SendMessage";
 
 function ProfileCard(): JSX.Element {
   const tabs = [
-    { label: 'ABOUT', card_class_name: 'card-about' },
-    { label: 'EXPERIENCE', card_class_name: 'card-experience' },
-    { label: 'CONTACT', card_class_name: 'card-contact' },
+    { label: "ABOUT", card_class_name: "card-about" },
+    { label: "EXPERIENCE", card_class_name: "card-experience" },
+    { label: "CONTACT", card_class_name: "card-contact" },
   ];
 
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
@@ -21,9 +21,9 @@ function ProfileCard(): JSX.Element {
     <div className="front-card">
       <div className={selectedTab.card_class_name}>
         <main>
-          {selectedTab.label === 'ABOUT' ? <AboutTab /> : null}
-          {selectedTab.label === 'EXPERIENCE' ? <ExperienceTab /> : null}
-          {selectedTab.label === 'CONTACT' ? <ContactTab /> : null}
+          {selectedTab.label === "ABOUT" ? <AboutTab /> : null}
+          {selectedTab.label === "EXPERIENCE" ? <ExperienceTab /> : null}
+          {selectedTab.label === "CONTACT" ? <ContactTab /> : null}
         </main>
         <nav className="card-navbar">
           <ul>
@@ -31,7 +31,7 @@ function ProfileCard(): JSX.Element {
               <li
                 role="tab"
                 key={item.label}
-                className={item.label === selectedTab.label ? 'selected' : ''}
+                className={item.label === selectedTab.label ? "selected" : ""}
                 onClick={() => setSelectedTab(item)}
                 onKeyDown={() => setSelectedTab(item)}
               >

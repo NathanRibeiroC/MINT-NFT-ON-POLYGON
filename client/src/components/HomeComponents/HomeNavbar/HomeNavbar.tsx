@@ -1,4 +1,4 @@
-import './_home_navbar.scss';
+import "./_home_navbar.scss";
 
 function HomeNavbar(): JSX.Element {
   return (

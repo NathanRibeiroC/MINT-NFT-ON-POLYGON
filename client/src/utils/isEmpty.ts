@@ -11,15 +11,15 @@ type IsEmptyParameterTypes =
   | Record<string, never>;
 
 export default function isEmpty(val: IsEmptyParameterTypes): boolean {
-  if (val === '' || val === '') return true;
+  if (val === "" || val === "") return true;
 
   if (val === undefined) return true;
 
   if (
-    typeof val === 'function' ||
-    typeof val === 'number' ||
-    typeof val === 'boolean' ||
-    Object.prototype.toString.call(val) === '[object Date]'
+    typeof val === "function" ||
+    typeof val === "number" ||
+    typeof val === "boolean" ||
+    Object.prototype.toString.call(val) === "[object Date]"
   )
     return false;
 
@@ -34,7 +34,7 @@ export default function isEmpty(val: IsEmptyParameterTypes): boolean {
     }
   }
 
-  if (typeof val === 'object') {
+  if (typeof val === "object") {
     // empty object
     const keys = Object.keys(val);
     let r = true;

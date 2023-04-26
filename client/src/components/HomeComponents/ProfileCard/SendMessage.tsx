@@ -1,11 +1,11 @@
 // import { useState } from 'react';
-import ContactMeButton from '../../GeneralComponents/SubmitButton';
-import { useAppDispatch } from '../../../redux/app/hooks';
-import { unFlipCard } from '../../../redux/feature/flip-profile-card/flip-profile-card';
-import GeneralFormInput from '../../GeneralComponents/GeneralFormInput';
-import GeneralTextArea from '../../GeneralComponents/GeneralTextArea';
-import ReturnButton from '../../GeneralComponents/ReturnButton';
-import './_snd_msg_form.scss';
+import ContactMeButton from "../../GeneralComponents/SubmitButton";
+import { useAppDispatch } from "../../../redux/app/hooks";
+import { unFlipCard } from "../../../redux/feature/flip-profile-card/flip-profile-card";
+import GeneralFormInput from "../../GeneralComponents/GeneralFormInput";
+import GeneralTextArea from "../../GeneralComponents/GeneralTextArea";
+import ReturnButton from "../../GeneralComponents/ReturnButton";
+import "./_snd_msg_form.scss";
 
 function SendMessageCard(): JSX.Element {
   // const [inputsValidationStateObj, setInputsValidationStateObj] = useState<object[]>([

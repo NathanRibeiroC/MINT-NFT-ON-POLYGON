@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import profilePicture from '../../../../public/profile img-1.jpg';
-import ProfileBackgroundAnimatedGradient from './ProfileBackgroundAnimatedGradient';
-import AnimatedWavesComponents from './AnimatedWavesComponents';
+import { motion } from "framer-motion";
+import profilePicture from "../../../../public/profile img-1.jpg";
+import ProfileBackgroundAnimatedGradient from "./ProfileBackgroundAnimatedGradient";
+import AnimatedWavesComponents from "./AnimatedWavesComponents";
 
 function ExperienceTab(): JSX.Element {
   return (

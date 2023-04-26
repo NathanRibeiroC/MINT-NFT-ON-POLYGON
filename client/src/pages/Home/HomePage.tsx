@@ -1,5 +1,5 @@
-import StarsBackground from '../../components/HomeComponents/AnimatedBackgrounds/StarsBackground';
-import HomeNavbar from '../../components/HomeComponents/HomeNavbar/HomeNavbar';
+import StarsBackground from "../../components/HomeComponents/AnimatedBackgrounds/StarsBackground";
+import HomeNavbar from "../../components/HomeComponents/HomeNavbar/HomeNavbar";
 
 function HomePage() {
   return (

@@ -1,6 +1,6 @@
-import './_general_text_area.scss';
-import { useState } from 'react';
-import isEmpty from '../../utils/isEmpty';
+import "./_general_text_area.scss";
+import { useState } from "react";
+import isEmpty from "../../utils/isEmpty";
 
 interface GeneralFormInputPropsType {
   labelName: string;
@@ -8,7 +8,7 @@ interface GeneralFormInputPropsType {
 }
 
 function GeneralTextArea({ id, labelName }: GeneralFormInputPropsType) {
-  const [inputContent, setInputContent] = useState<string>('');
+  const [inputContent, setInputContent] = useState<string>("");
 
   return (
     <div className="gen-text-area-group">
@@ -21,7 +21,7 @@ function GeneralTextArea({ id, labelName }: GeneralFormInputPropsType) {
       <label
         htmlFor={id}
         className={
-          isEmpty(inputContent) ? 'user-label-show' : 'user-label-hidde'
+          isEmpty(inputContent) ? "user-label-show" : "user-label-hidde"
         }
       >
         {labelName}

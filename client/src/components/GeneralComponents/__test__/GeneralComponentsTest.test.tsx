@@ -1,12 +1,12 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import renderer from 'react-test-renderer';
-import '@testing-library/jest-dom';
-import GeneralFormInput from '../GeneralFormInput';
-import GeneralTextArea from '../GeneralTextArea';
-import SubmitButton from '../SubmitButton';
+import { render, screen, fireEvent } from "@testing-library/react";
+import renderer from "react-test-renderer";
+import "@testing-library/jest-dom";
+import GeneralFormInput from "../GeneralFormInput";
+import GeneralTextArea from "../GeneralTextArea";
+import SubmitButton from "../SubmitButton";
 
-describe('GeneralFormInput.tsx', () => {
-  test('GeneralFormInput.tsx render test', () => {
+describe("GeneralFormInput.tsx", () => {
+  test("GeneralFormInput.tsx render test", () => {
     const getInputValue = jest.fn((x) => x);
     const tree = renderer
       .create(
@@ -20,7 +20,7 @@ describe('GeneralFormInput.tsx', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('GeneralFormInput.tsx controled input test + state lift up test on getInputValue', () => {
+  test("GeneralFormInput.tsx controled input test + state lift up test on getInputValue", () => {
     const getInputValue = jest.fn((x) => x);
     // ARRANGE
     render(
@@ -30,15 +30,15 @@ describe('GeneralFormInput.tsx', () => {
         getInputValue={getInputValue}
       />
     );
-    const input = screen.getByLabelText('Full Name');
-    fireEvent.change(input, { target: { value: '23' } });
+    const input = screen.getByLabelText("Full Name");
+    fireEvent.change(input, { target: { value: "23" } });
     expect(getInputValue.mock.calls).toHaveLength(1);
-    expect(getInputValue).toHaveBeenLastCalledWith('23', 'fullName');
+    expect(getInputValue).toHaveBeenLastCalledWith("23", "fullName");
   });
 });
 
-describe('GeneralTextArea.tsx', () => {
-  test('GeneralTextArea.tsx render test', () => {
+describe("GeneralTextArea.tsx", () => {
+  test("GeneralTextArea.tsx render test", () => {
     const tree = renderer
       .create(
         <GeneralTextArea
@@ -50,7 +50,7 @@ describe('GeneralTextArea.tsx', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('GeneralTextArea.tsx placeholder disappear when writing some test', () => {
+  test("GeneralTextArea.tsx placeholder disappear when writing some test", () => {
     // ARRANGE
     render(
       <GeneralTextArea
@@ -59,15 +59,15 @@ describe('GeneralTextArea.tsx', () => {
       />
     );
     // expect(screen.getByText("Write your message here ...")).toBeInTheDocument();
-    const input = screen.getByLabelText('Write your message here ...');
-    fireEvent.blur(input, { target: { value: 'Test input' } });
+    const input = screen.getByLabelText("Write your message here ...");
+    fireEvent.blur(input, { target: { value: "Test input" } });
     // expect(input.firstChild).toHaveClass('user-label-hidde'); // class after input
     expect(input).toBeEmptyDOMElement();
   });
 });
 
-describe('SubmitButton.tsx', () => {
-  test('SubmitButton.tsx render test', () => {
+describe("SubmitButton.tsx", () => {
+  test("SubmitButton.tsx render test", () => {
     const handleClickFlipContactCard = jest.fn();
     const tree = renderer
       .create(
@@ -82,7 +82,7 @@ describe('SubmitButton.tsx', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('SubmitButton.tsx ', () => {
+  test("SubmitButton.tsx ", () => {
     const handleClickFlipContactCard = jest.fn();
     const tree = renderer
       .create(

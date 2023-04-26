@@ -1,9 +1,9 @@
-import './_submit_button.scss';
-import Buttonicon from '../../../public/contact-me-button-icon.svg';
+import "./_submit_button.scss";
+import Buttonicon from "../../../public/contact-me-button-icon.svg";
 
 interface SubmitButtonPropsType {
   buttonName: string;
-  buttonType?: 'button' | 'submit' | 'reset' | undefined;
+  buttonType?: "button" | "submit" | "reset" | undefined;
   handleClickFunction?: () => void;
 }
 function ContactMeButton({
@@ -14,7 +14,7 @@ function ContactMeButton({
   return (
     /* eslint-disable react/button-has-type */
     <button
-      type={buttonType === undefined ? 'button' : buttonType}
+      type={buttonType === undefined ? "button" : buttonType}
       className="cssbuttons-io-button"
     >
       {buttonName}
@@ -37,7 +37,7 @@ function ContactMeButton({
 }
 
 ContactMeButton.defaultProps = {
-  buttonType: 'button',
+  buttonType: "button",
   handleClickFunction: () => {},
 };
 

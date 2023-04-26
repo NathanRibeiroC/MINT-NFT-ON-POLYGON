@@ -3,5 +3,5 @@ export default function useInputValidation(): object {
   //     if(payload.length > 200){
   //     }
   // }
-  return [{ name: '', validated: true }];
+  return [{ name: "", validated: true }];
 }

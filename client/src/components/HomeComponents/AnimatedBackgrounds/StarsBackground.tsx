@@ -1,5 +1,5 @@
-import './_stars_background.scss';
-import './_gradient_brackground.scss';
+import "./_stars_background.scss";
+import "./_gradient_brackground.scss";
 
 function StarsBackground(): JSX.Element {
   return (

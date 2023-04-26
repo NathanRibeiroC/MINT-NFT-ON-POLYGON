@@ -1,4 +1,4 @@
-import './_general_form_input.scss';
+import "./_general_form_input.scss";
 
 interface GeneralFormInputPropsType {
   labelName: string;

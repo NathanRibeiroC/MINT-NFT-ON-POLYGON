@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion';
-import profilePicture from '../../../../public/profile img-1.jpg';
-import { ReactComponent as GithubIcon } from '../../../../public/iconmonstr-github-1.svg';
-import { ReactComponent as LinkedinIcon } from '../../../../public/iconmonstr-linkedin-4.svg';
-import ProfileBackgroundAnimatedGradient from './ProfileBackgroundAnimatedGradient';
-import AnimatedWavesComponents from './AnimatedWavesComponents';
+import { motion } from "framer-motion";
+import profilePicture from "../../../../public/profile img-1.jpg";
+import { ReactComponent as GithubIcon } from "../../../../public/iconmonstr-github-1.svg";
+import { ReactComponent as LinkedinIcon } from "../../../../public/iconmonstr-linkedin-4.svg";
+import ProfileBackgroundAnimatedGradient from "./ProfileBackgroundAnimatedGradient";
+import AnimatedWavesComponents from "./AnimatedWavesComponents";
 
 function AboutTab(): JSX.Element {
   return (

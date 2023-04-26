@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import { ReactComponent as ClipboardIcon } from '../../../../public/clipboard-icon.svg';
-import { ReactComponent as CheckIcon } from '../../../../public/check-icon.svg';
-import './_clipboard_button.scss';
-import isEmpty from '../../../utils/isEmpty';
+import { useEffect, useState } from "react";
+import { ReactComponent as ClipboardIcon } from "../../../../public/clipboard-icon.svg";
+import { ReactComponent as CheckIcon } from "../../../../public/check-icon.svg";
+import "./_clipboard_button.scss";
+import isEmpty from "../../../utils/isEmpty";
 
 interface PropsType {
   dataClassName: string;
@@ -20,7 +20,7 @@ function ClipboardButton({ dataClassName }: PropsType): JSX.Element {
       document.getElementsByClassName(dataClassName)[0].textContent;
 
     if (!isEmpty(classTextContent)) {
-      navigator.clipboard.writeText(classTextContent || '');
+      navigator.clipboard.writeText(classTextContent || "");
       setTriggerUseEffect(true);
       setIsCopiedToClipboard(true);
     }
@@ -58,8 +58,8 @@ function ClipboardButton({ dataClassName }: PropsType): JSX.Element {
       type="button"
       className={
         isCopiedToClipboard
-          ? 'clipboard-button content-copied'
-          : 'clipboard-button'
+          ? "clipboard-button content-copied"
+          : "clipboard-button"
       }
       onClick={copyToClipboard}
     >

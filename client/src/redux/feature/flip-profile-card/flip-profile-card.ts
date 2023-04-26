@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 interface FlipState {
   value: boolean;
@@ -9,7 +9,7 @@ const initialState: FlipState = {
 };
 
 const flipProfileCardSlice = createSlice({
-  name: 'flipProfileCard',
+  name: "flipProfileCard",
   initialState,
   reducers: {
     flipCard(state) {

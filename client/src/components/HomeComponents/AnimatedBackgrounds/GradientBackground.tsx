@@ -1,4 +1,4 @@
-import './_gradient_brackground.scss';
+import "./_gradient_brackground.scss";
 
 function GradientBackground(): JSX.Element {
   return (

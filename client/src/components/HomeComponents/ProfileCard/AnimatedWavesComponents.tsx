@@ -1,7 +1,7 @@
-import { ReactComponent as Wave1 } from '../../../../public/wave1.svg';
-import { ReactComponent as Wave2 } from '../../../../public/wave2.svg';
-import { ReactComponent as Wave3 } from '../../../../public/wave3.svg';
-import { ReactComponent as Wave4 } from '../../../../public/wave4.svg';
+import { ReactComponent as Wave1 } from "../../../../public/wave1.svg";
+import { ReactComponent as Wave2 } from "../../../../public/wave2.svg";
+import { ReactComponent as Wave3 } from "../../../../public/wave3.svg";
+import { ReactComponent as Wave4 } from "../../../../public/wave4.svg";
 
 interface AnimatedWavesComponentsProps {
   classNameProp: string;

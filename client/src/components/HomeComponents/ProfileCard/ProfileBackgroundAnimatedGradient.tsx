@@ -1,4 +1,4 @@
-import './_prof_back_an_grad.scss';
+import "./_prof_back_an_grad.scss";
 
 interface ClassName {
   classTabName: string;
