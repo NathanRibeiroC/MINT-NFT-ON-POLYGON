@@ -16,11 +16,12 @@ export default function isEmpty(val: IsEmptyParameterTypes): boolean {
   if (val === undefined) return true;
 
   if (
-    typeof val === 'function'
-    || typeof val === 'number'
-    || typeof val === 'boolean'
-    || Object.prototype.toString.call(val) === '[object Date]'
-  ) return false;
+    typeof val === 'function' ||
+    typeof val === 'number' ||
+    typeof val === 'boolean' ||
+    Object.prototype.toString.call(val) === '[object Date]'
+  )
+    return false;
 
   // null or 0 length array
   if (val == null) {

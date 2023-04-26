@@ -11,11 +11,13 @@ interface PropsType {
 const MILLISECONDS = 800;
 
 function ClipboardButton({ dataClassName }: PropsType): JSX.Element {
-  const [isCopiedToClipboard, setIsCopiedToClipboard] = useState<boolean>(false);
+  const [isCopiedToClipboard, setIsCopiedToClipboard] =
+    useState<boolean>(false);
   const [triggerUseEffect, setTriggerUseEffect] = useState<boolean>(false);
 
   const copyToClipboard = () => {
-    const classTextContent = document.getElementsByClassName(dataClassName)[0].textContent;
+    const classTextContent =
+      document.getElementsByClassName(dataClassName)[0].textContent;
 
     if (!isEmpty(classTextContent)) {
       navigator.clipboard.writeText(classTextContent || '');
