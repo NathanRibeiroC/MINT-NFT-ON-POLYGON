@@ -14,7 +14,7 @@ describe('GeneralFormInput.tsx', () => {
           id="fullName"
           labelName="Full Name"
           getInputValue={getInputValue}
-        />
+        />,
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
@@ -28,7 +28,7 @@ describe('GeneralFormInput.tsx', () => {
         id="fullName"
         labelName="Full Name"
         getInputValue={getInputValue}
-      />
+      />,
     );
     const input = screen.getByLabelText('Full Name');
     fireEvent.change(input, { target: { value: '23' } });
@@ -44,7 +44,7 @@ describe('GeneralTextArea.tsx', () => {
         <GeneralTextArea
           id="messageContent"
           labelName="Write your message here ..."
-        />
+        />,
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
@@ -56,7 +56,7 @@ describe('GeneralTextArea.tsx', () => {
       <GeneralTextArea
         id="messageContent"
         labelName="Write your message here ..."
-      />
+      />,
     );
     // expect(screen.getByText("Write your message here ...")).toBeInTheDocument();
     const input = screen.getByLabelText('Write your message here ...');
@@ -76,7 +76,7 @@ describe('SubmitButton.tsx', () => {
             buttonName="TEST SUBMIT BUTTON!"
             handleClickFunction={handleClickFlipContactCard}
           />
-        </div>
+        </div>,
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
@@ -91,7 +91,7 @@ describe('SubmitButton.tsx', () => {
             buttonName="TEST SUBMIT BUTTON!"
             handleClickFunction={handleClickFlipContactCard}
           />
-        </div>
+        </div>,
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
