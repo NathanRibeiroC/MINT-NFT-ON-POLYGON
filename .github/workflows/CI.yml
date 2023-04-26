@@ -35,8 +35,3 @@ jobs:
       - name: Run eslint
         working-directory: ./client
         run: yarn lint
-
-      # Checks if build failed
-      - name: Prevent push on CI failure
-      if: ${{ failure() }}
-      run: echo "CI checks failed, push prevented"
