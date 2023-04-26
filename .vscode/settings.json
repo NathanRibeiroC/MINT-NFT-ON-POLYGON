@@ -2,6 +2,11 @@
     "conventionalCommits.scopes": [
         "CUSTOM HOOK",
         "UI",
-        "UTILS"
+        "UTILS",
+        "UNIT TEST",
+        "LINTER",
+        "GITHUB ACTIONS",
+        "PRETTIER",
+        "ESLINT"
     ]
 }
