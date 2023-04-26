@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/Home/HomePage";
 import "./App.scss";
-import TestPage from './pages/Home/TestPage';
+import TestPage from "./pages/Home/TestPage";
 
 function App(): JSX.Element {
   return (
